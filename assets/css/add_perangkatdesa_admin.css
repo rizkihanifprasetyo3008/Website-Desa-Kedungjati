@@ -1,0 +1,241 @@
+#additional-input {
+  display: none;
+}
+#flexcol {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+}
+.path {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.path .path_text span {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+.path .path_text span a:hover {
+  color: var(--secondary-color2);
+  text-decoration: underline;
+}
+
+.form_perangkatdesa_wrapper {
+  background-color: var(--light-color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+.form_perangkatdesa_title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.form_perangkatdesa_title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--secondary-font);
+  margin-bottom: 10px;
+}
+.form_perangkatdesa_title span {
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.form_perangkatdesa {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 2rem;
+}
+.form_perangkatdesa .form_group,
+.form_perangkatdesa .additional-input {
+  background-color: var(--secondary-color1);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.form_perangkatdesa .form_group input {
+  background-color: transparent;
+  font-family: var(--secondary-font);
+  border: none;
+  outline: none;
+  width: 78%;
+  font-size: 0.9rem;
+}
+
+.form_perangkatdesa .form_group label {
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.additional-input input {
+  width: 70%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+}
+.additional-input label {
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 10px;
+  width: 30%;
+}
+
+.form_perangkatdesa .form_group select {
+  background-color: transparent;
+  font-family: var(--secondary-font);
+  border: none;
+  outline: none;
+  width: 78%;
+  font-size: 0.9rem;
+  /* color opacity reduce */
+  color: rgba(0, 0, 0, 0.5);
+}
+.form_perangkatdesa .form_group input[type="date"] {
+  background-color: transparent;
+  font-family: var(--secondary-font);
+  border: none;
+  outline: none;
+  width: 78%;
+  font-size: 0.9rem;
+  /* color opacity reduce */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form_perangkatdesa .submit_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.form_perangkatdesa .submit_button button {
+  background-color: var(--dark-color);
+  width: 100%;
+  color: var(--light-color);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.form_perangkatdesa .submit_button button i {
+  margin-right: 10px;
+  color: var(--light-color);
+}
+.form_perangkatdesa .submit_button button:hover {
+  color: var(--secondary-color2);
+}
+.form_perangkatdesa .submit_button button:hover i {
+  color: var(--secondary-color2);
+}
+
+.nama_lengkap_validasi,
+.validasi_jabatan,
+.validasi_tanggal,
+.validasi_tempatlahir,
+.validasi_jeniskelamin,
+.validasi_agama,
+.validasi_agama2,
+.validasi_pendidikan,
+.validasi_alamat,
+.validasi_jenisjabatan,
+.validasi_photo {
+  color: red;
+  font-size: 0.7rem;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-right: 10px;
+  width: 78%;
+  margin-top: -10px;
+  display: none;
+}
+.nama_lengkap_validasi.active,
+.validasi_jabatan.active,
+.validasi_tanggal.active,
+.validasi_tempatlahir.active,
+.validasi_jeniskelamin.active,
+.validasi_agama.active,
+.validasi_agama2.active,
+.validasi_pendidikan.active,
+.validasi_alamat.active,
+.validasi_jenisjabatan.active,
+.validasi_photo.active {
+  display: block;
+  align-items: center;
+}
+.valid_red.active {
+  border: 1px solid red !important;
+}
+
+.nama_lengkap_validasi2,
+.validasi_jabatan2,
+.validasi_tanggal2,
+.validasi_tempatlahir2,
+.validasi_jeniskelamin2,
+.validasi_agama2,
+.validasi_pendidikan2,
+.validasi_alamat2 {
+  color: red;
+  font-size: 0.7rem;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-right: 10px;
+  width: 78%;
+  margin-top: -10px;
+  display: none;
+}
+.nama_lengkap_validasi2.active,
+.validasi_jabatan2.active,
+.validasi_tanggal2.active,
+.validasi_tempatlahir2.active,
+.validasi_jeniskelamin2.active,
+.validasi_agama2.active,
+.validasi_pendidikan2.active,
+.validasi_alamat2.active {
+  display: block;
+  align-items: center;
+}
+
+.form_img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.form_img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,271 @@
+<section class="profilpedes">
+  <div class="shortcut-links" data-aos="fade-up">
+    <h4>
+      <a href="/" class="links-back">Beranda</a> /
+      <a href="#" class="location-now">Profil Perangkat Desa</a>
+    </h4>
+  </div>
+  <div class="profilpedes-all" data-aos="fade-up">
+    <div class="profilpedes-left">
+      <div class="profilpedes-wrapper">
+        <div class="profilpedes-title">
+          <h3>Profil Perangkat Desa Kedungjati</h3>
+        </div>
+        <div class="profilpedes-kategori">
+          <div class="profilpedes-kategori-box">
+            <button type="button" id="sekretaris-desa" class="sekretaris-desa">
+              <h4>Sekretaris Desa</h4>
+            </button>
+            <button type="button" id="kepala-urusan" class="kepala-urusan">
+              <h4>Kepala Urusan</h4>
+            </button>
+            <button type="button" id="kepala-seksi" class="kepala-seksi">
+              <h4>Kepala Seksi</h4>
+            </button>
+            <button type="button" id="kepala-dusun" class="kepala-seksi">
+              <h4>Kepala Dusun</h4>
+            </button>
+          </div>
+        </div>
+        <div class="profilpedes-sekretaris-desa" id="profilpedes-sekretaris-desa">
+          <% sekdes.forEach((sekdesItem) => {%>
+          <div class="profilpedes-sekretaris-desa-title">
+            <h3><%= sekdesItem.jabatan %></h3>
+          </div>
+          <div class="profilpedes-img">
+            <img src="img/perangkatdesa/<%= sekdesItem.photo %>" alt="" />
+          </div>
+          <div class="profilpedes-info">
+            <div class="profilpedes-info-box">
+              <h4>Nama</h4>
+              <p>:</p>
+              <p><%= sekdesItem.nama_perangkat %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Tempat, Tanggal Lahir</h4>
+              <p>:</p>
+              <p><%= sekdesItem.ttl %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jenis Kelamin</h4>
+              <p>:</p>
+              <p><%= sekdesItem.jeniskelamin %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Agama</h4>
+              <p>:</p>
+              <p><%= sekdesItem.agama %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Pendidikan Terakhir</h4>
+              <p>:</p>
+              <p><%= sekdesItem.pendidikan_terakhir %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <div class="profilpedes-kepalaurusan" id="profilpedes-kepalaurusan">
+          <% kaur.forEach(kaurItem => { %>
+          <div class="profilpedes-kepalaurusan-title">
+            <h3><%= kaurItem.jabatan %></h3>
+          </div>
+          <div class="profilpedes-img">
+            <img src="img/perangkatdesa/<%= kaurItem.photo  %>" alt="" />
+          </div>
+          <div class="profilpedes-info">
+            <div class="profilpedes-info-box">
+              <h4>Nama</h4>
+              <p>:</p>
+              <p><%= kaurItem.nama_perangkat %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Tempat, Tanggal Lahir</h4>
+              <p>:</p>
+              <p><%= kaurItem.ttl %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jenis Kelamin</h4>
+              <p>:</p>
+              <p><%= kaurItem.jeniskelamin %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Agama</h4>
+              <p>:</p>
+              <p><%= kaurItem.agama %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Pendidikan Terakhir</h4>
+              <p>:</p>
+              <p><%= kaurItem.pendidikan_terakhir %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jabatan</h4>
+              <p>:</p>
+              <p><%= kaurItem.jabatan %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <div class="profilpedes-kepalaseksi" id="profilpedes-kepalaseksi">
+          <% kasi.forEach(kasiItem => { %>
+
+          <div class="profilpedes-kepalaseksi-title">
+            <h3><%= kasiItem.jabatan %></h3>
+          </div>
+          <div class="profilpedes-img">
+            <img src="img/perangkatdesa/<%= kasiItem.photo %>" alt="" />
+          </div>
+          <div class="profilpedes-info">
+            <div class="profilpedes-info-box">
+              <h4>Nama</h4>
+              <p>:</p>
+              <p><%= kasiItem.nama_perangkat %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Tempat, Tanggal Lahir</h4>
+              <p>:</p>
+              <p><%= kasiItem.ttl %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jenis Kelamin</h4>
+              <p>:</p>
+              <p><%= kasiItem.jeniskelamin %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Agama</h4>
+              <p>:</p>
+              <p><%= kasiItem.agama %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Pendidikan Terakhir</h4>
+              <p>:</p>
+              <p><%= kasiItem.pendidikan_terakhir %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <div class="profilpedes-kepaladusun" id="profilpedes-kepaladusun">
+          <% kadus.forEach((kadusItem) => { %>
+          <div class="profilpedes-kepaladusun-title">
+            <h3><%= kadusItem.jabatan %></h3>
+          </div>
+          <div class="profilpedes-img">
+            <img src="img/perangkatdesa/<%= kadusItem.photo  %>" alt="" />
+          </div>
+          <div class="profilpedes-info">
+            <div class="profilpedes-info-box">
+              <h4>Nama</h4>
+              <p>:</p>
+              <p><%= kadusItem.nama_perangkat %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Tempat, Tanggal Lahir</h4>
+              <p>:</p>
+              <p><%= kadusItem.ttl %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jenis Kelamin</h4>
+              <p>:</p>
+              <p><%= kadusItem.jeniskelamin %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Agama</h4>
+              <p>:</p>
+              <p><%= kadusItem.agama %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Pendidikan Terakhir</h4>
+              <p>:</p>
+              <p><%= kadusItem.pendidikan_terakhir %></p>
+            </div>
+            <div class="profilpedes-info-box">
+              <h4>Jabatan</h4>
+              <p>:</p>
+              <p><%= kadusItem.detail_jabatan %></p>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <div class="profilpedes-right">
+      <div class="rekomendasi-berita-container">
+        <div class="rekomendasi-berita-wrapper">
+          <div class="rekomendasi-berita-title">
+            <h3>Lihat Profil Lainnya</h3>
+          </div>
+          <div class="anothermenu">
+            <ul>
+              <li><a href="/visimisi">Visi dan Misi</a></li>
+              <li><a href="/profilkades">Profil Kepala Desa</a></li>
+              <li><a href="/profilpedes">Profil Perangkat Desa</a></li>
+              <li><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></li>
+              <!-- <li><a href="/budayadesa">Budaya Desa</a></li> -->
+              <li><a href="/infrastrukturdesa">Infrastruktur Desa</a></li>
+              <li><a href="/petadesa">Peta Desa</a></li>
+              <li><a href="/potensidesa">Potensi Desa</a></li>
+              <li><a href="/pembangunandesa">Pembangunan Desa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // kategori button
+  let sekretarisDesa = document.getElementById("sekretaris-desa");
+  let kepalaUrusan = document.getElementById("kepala-urusan");
+  let kepalaSeksi = document.getElementById("kepala-seksi");
+  let kepalaDusun = document.getElementById("kepala-dusun");
+  let profilpedesSekretarisDesa = document.getElementById("profilpedes-sekretaris-desa");
+  let profilpedesKepalaUrusan = document.getElementById("profilpedes-kepalaurusan");
+  let profilpedesKepalaSeksi = document.getElementById("profilpedes-kepalaseksi");
+  let profilpedesKepalaDusun = document.getElementById("profilpedes-kepaladusun");
+
+  // if kepalaurusan onclick add active class to kepalaurusan, and sekretarisdesa, remove active class from kepala seksi and kepala dusun
+  kepalaUrusan.onclick = function () {
+    kepalaUrusan.classList.add("active");
+    sekretarisDesa.classList.add("active");
+    kepalaSeksi.classList.remove("active");
+    kepalaDusun.classList.remove("active");
+    profilpedesSekretarisDesa.classList.add("active");
+    profilpedesKepalaUrusan.classList.add("active");
+    profilpedesKepalaSeksi.classList.remove("active");
+    profilpedesKepalaDusun.classList.remove("active");
+  };
+  // same to kepalaseksi
+  kepalaSeksi.onclick = function () {
+    kepalaSeksi.classList.add("active");
+    kepalaDusun.classList.remove("active");
+    kepalaUrusan.classList.remove("active");
+    sekretarisDesa.classList.add("active");
+    profilpedesSekretarisDesa.classList.add("active");
+    profilpedesKepalaUrusan.classList.remove("active");
+    profilpedesKepalaSeksi.classList.add("active");
+    profilpedesKepalaDusun.classList.remove("active");
+  };
+  // same to kepaladusun
+  kepalaDusun.onclick = function () {
+    kepalaDusun.classList.add("active");
+    kepalaSeksi.classList.remove("active");
+    kepalaUrusan.classList.remove("active");
+    sekretarisDesa.classList.add("active");
+    profilpedesSekretarisDesa.classList.add("active");
+    profilpedesKepalaUrusan.classList.remove("active");
+    profilpedesKepalaSeksi.classList.remove("active");
+    profilpedesKepalaDusun.classList.add("active");
+  };
+  // same to sekretarisdesa
+  sekretarisDesa.onclick = function () {
+    sekretarisDesa.classList.remove("active");
+    kepalaSeksi.classList.remove("active");
+    kepalaUrusan.classList.remove("active");
+    kepalaDusun.classList.remove("active");
+    profilpedesSekretarisDesa.classList.remove("active");
+    profilpedesKepalaUrusan.classList.remove("active");
+    profilpedesKepalaSeksi.classList.remove("active");
+    profilpedesKepalaDusun.classList.remove("active");
+  };
+</script>

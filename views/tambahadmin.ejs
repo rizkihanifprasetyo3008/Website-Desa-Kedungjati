@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard mark" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Kepala Desa</a>
+              </li>
+              <li class="perangkatdesa" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/logout_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3><%= NamaAdmin %></h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down">
+                <div class="path">
+                  <div class="path_text">
+                    <span><a href="/index_admin">Dashboard</a> / <a href="/tambahadmin">Tambah Admin Baru</a></span>
+                  </div>
+                </div>
+                <div class="form_perangkatdesa_wrapper">
+                  <div class="form_perangkatdesa_title">
+                    <h3>Tambah Admin Baru</h3>
+                    <span>Silahkan isi formulir di bawah jika ingin menambah perangkat desa</span>
+                  </div>
+                  <form method="POST" action="/tambahadmin" class="form_tambahadmin" id="form_tambahadmin">
+                    <div class="form_group nama_adminbox" id="nama_adminbox">
+                      <label for="NamaAdmin">Nama Admin</label>
+                      <input type="text" name="NamaAdmin" id="NamaAdmin" placeholder=": Masukkan Nama Admin" />
+                    </div>
+                    <span class="nama_admin_validasi" id="nama_admin_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Nama Tidak Boleh Kosong, Harus Berupa Karakter </span>
+                    <div class="form_group username_adminbox" id="username_adminbox">
+                      <label for="UsernameAdmin">Username</label>
+                      <input type="text" name="UsernameAdmin" id="UsernameAdmin" placeholder=": Masukkan Username Admin" />
+                    </div>
+                    <span class="username_admin_validasi" id="username_admin_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Username harus diisi, harus kurang dari 10 karakter </span>
+                    <div class="form_group password_adminbox" id="password_adminbox">
+                      <label for="PasswordAdmin">Password</label>
+                      <input type="password" name="PasswordAdmin" id="PasswordAdmin" placeholder=": Masukkan Password Admin" />
+                    </div>
+                    <span class="password_admin_validasi" id="password_admin_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Password Salah, Harap perhatikan dengan benar </span>
+                    <div class="form_group konfirmpass_adminbox" id="konfirmasi_password">
+                      <label for="KonfirmasiPasswordAdmin">Konfirmasi Password</label>
+                      <input type="password" name="KonfirmasiPasswordAdmin" id="KonfirmasiPasswordAdmin" placeholder=": Masukkan Konfirmasi Password Admin" />
+                    </div>
+                    <span class="konfirmasipass_admin_validasi" id="konfirmasipass_admin_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Password Salah, Harap perhatikan dengan benar </span>
+                    <div class="submit_button">
+                      <button type="submit" id="submit_button_admin"><i class="fa-solid fa-user-plus"></i>Tambah Admin</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // add admin
+      const submit_admin = document.getElementById("submit_button_admin");
+      const input_nama_admin = document.getElementById("NamaAdmin");
+      const validasi_nama_admin = document.getElementById("nama_admin_validasi");
+      const nama_adminbox = document.getElementById("nama_adminbox");
+      //   username
+      const input_username_admin = document.getElementById("UsernameAdmin");
+      const validasi_username_admin = document.getElementById("username_admin_validasi");
+      const username_adminbox = document.getElementById("username_adminbox");
+      // password
+      const input_password_admin = document.getElementById("PasswordAdmin");
+      const validasi_password_admin = document.getElementById("password_admin_validasi");
+      const password_adminbox = document.getElementById("password_adminbox");
+      //   konfirmasi password
+      const input_konfirmasi_password_admin = document.getElementById("KonfirmasiPasswordAdmin");
+      const validasi_konfirmasi_password_admin = document.getElementById("konfirmasipass_admin_validasi");
+      const konfirmasi_password_adminbox = document.getElementById("konfirmasi_password");
+
+      function validasinamaadmin() {
+        if (input_nama_admin.value == "" || input_nama_admin.value.match(/[0-9]/g)) {
+          validasi_nama_admin.classList.add("active");
+          nama_adminbox.classList.add("active");
+        } else {
+          validasi_nama_admin.classList.remove("active");
+          nama_adminbox.classList.remove("active");
+        }
+      }
+      function validasiusername() {
+        // username admin tak boleh kosong dan kuran dari 10 karakter
+        if (input_username_admin.value == "" || input_username_admin.value.length > 10) {
+          validasi_username_admin.classList.add("active");
+          username_adminbox.classList.add("active");
+        } else {
+          validasi_username_admin.classList.remove("active");
+          username_adminbox.classList.remove("active");
+        }
+      }
+      function validasipassword() {
+        // password admin tak boleh kosong dan kuran dari 10 karakter
+        if (input_password_admin.value == "") {
+          validasi_password_admin.classList.add("active");
+          password_adminbox.classList.add("active");
+        } else {
+          validasi_password_admin.classList.remove("active");
+          password_adminbox.classList.remove("active");
+        }
+      }
+      function validasikonfirmpass() {
+        // konfirmasi password admin harus sama dengan password admin
+        if (input_konfirmasi_password_admin.value == "" || input_konfirmasi_password_admin.value != input_password_admin.value) {
+          validasi_konfirmasi_password_admin.classList.add("active");
+          konfirmasi_password_adminbox.classList.add("active");
+        } else {
+          validasi_konfirmasi_password_admin.classList.remove("active");
+          konfirmasi_password_adminbox.classList.remove("active");
+        }
+      }
+
+      submit_admin.addEventListener("click", function (e) {
+        e.preventDefault();
+        validasinamaadmin();
+        validasiusername();
+        validasipassword();
+        validasikonfirmpass();
+
+        if (input_nama_admin.value != "" && input_username_admin.value != "" && input_password_admin.value != "" && input_konfirmasi_password_admin.value != "" && input_konfirmasi_password_admin.value == input_password_admin.value && input_username_admin.value.length <= 10 && !input_nama_admin.value.match(/[0-9]/g)) {
+          document.getElementById("form_tambahadmin").submit();
+        }
+      });
+    </script>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>

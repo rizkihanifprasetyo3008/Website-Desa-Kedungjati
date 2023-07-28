@@ -1,0 +1,507 @@
+.profilkades {
+  padding: 4rem 4rem;
+}
+.profilkades-all {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+}
+
+.profilkades-left {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 3rem 2rem;
+}
+.profilkades-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.profilkades-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+.profilkades-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilkades-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* button */
+.profilkades-kategoriall {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.profilkades-kategoriwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbdfea;
+  border-radius: 10px;
+}
+.profilkades-kategori button {
+  background-color: transparent;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+.profilkades-kategori button h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+.profilkades-kategori button:hover {
+  background-color: var(--secondary-color3);
+}
+.profilkades-kategori button:hover h4 {
+  color: var(--light-color);
+}
+.profilkades-kategori .profilkades-dataumum button {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--secondary-color3);
+  border-right: 1px solid var(--light-color);
+}
+.profilkades-kategori .profilkades-dataumum button h4 {
+  color: var(--light-color);
+}
+.profilkades-kategori .profilkades-riwayatpekerjaan button {
+  border-radius: 0 10px 10px 0;
+  border-left: 1px solid var(--light-color);
+}
+.profilkades-kategori .profilkades-riwayatpendidikan button {
+  border-left: 1px solid var(--light-color);
+  /* color: var(--dark-color); */
+}
+.profilkades-kategori .profilkades-dataumum.active button {
+  background-color: transparent;
+}
+.profilkades-kategori .profilkades-dataumum.active button h4 {
+  color: var(--dark-color);
+}
+
+.profilkades-riwayatpekerjaan.active button {
+  background-color: var(--secondary-color3);
+}
+.profilkades-riwayatpekerjaan.active button h4 {
+  color: var(--light-color);
+}
+.profilkades-riwayatpendidikan.active button {
+  background-color: var(--secondary-color3);
+}
+.profilkades-riwayatpendidikan.active button h4 {
+  color: var(--light-color);
+}
+/* end button */
+
+/* data umum */
+.profilkades-wrapper-dataumum {
+  background-color: #dbdfea;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profilkades-wrapper-dataumum.active {
+  display: none;
+}
+.profilkades-wrapper-riwayatpendidikan {
+  background-color: #dbdfea;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profilkades-wrapper-riwayatpendidikan.active {
+  display: flex;
+}
+.profilkades-wrapper-riwayatpekerjaan {
+  background-color: #dbdfea;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profilkades-wrapper-riwayatpekerjaan.active {
+  display: flex;
+}
+
+.profilkades-info-dataumum,
+.profilkades-info-riwayatpendidikan,
+.profilkades-info-riwayatpekerjaan {
+  /* background-color: aqua; */
+  width: 85%;
+}
+.profilkades-info-dataumum-title,
+.profilkades-info-riwayatpendidikan-title,
+.profilkades-info-riwayatpekerjaan-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.profilkades-info-dataumum-title h3,
+.profilkades-info-riwayatpendidikan-title h3,
+.profilkades-info-riwayatpekerjaan-title h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  text-align: center;
+}
+.profilkades-info-dataumum-boxinfo,
+.profilkades-info-riwayatpendidikan-box,
+.profilkades-info-riwayatpekerjaan-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: left !important;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #9ba4b5;
+}
+.profilkades-info-dataumum-boxinfo-title h4,
+.profilkades-info-riwayatpendidikan-box h4,
+.profilkades-info-riwayatpekerjaan-box h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+.profilkades-info-dataumum-boxinfo-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-color);
+}
+
+/* end data umum */
+
+@media only screen and (max-width: 1114px) {
+  /* decrease padding and font */
+  .profilkades {
+    padding: 2rem 4rem;
+  }
+  .profilkades-left {
+    padding: 2rem 1rem;
+  }
+  .profilkades-title h2 {
+    font-size: 1.2rem;
+  }
+  .profilkades-img img {
+    width: 250px;
+    height: 250px;
+  }
+  .profilkades-kategoriall {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  /* .profilkades-kategoriwrapper {
+    padding: 0.5rem 0.5rem;
+  } */
+  .profilkades-kategori button {
+    padding: 1rem 1rem;
+  }
+  .profilkades-kategori button h4 {
+    font-size: 0.7rem;
+  }
+  .profilkades-kategori .profilkades-dataumum button {
+    border-radius: 10px 0 0 10px;
+  }
+  .profilkades-kategori .profilkades-riwayatpekerjaan button {
+    border-radius: 0 10px 10px 0;
+  }
+  .profilkades-info-dataumum-title h3 {
+    font-size: 1.2rem;
+  }
+  .profilkades-info-dataumum-boxinfo-title h4 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-dataumum-boxinfo-info p {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpendidikan-title h3 {
+    font-size: 1.2rem;
+  }
+  .profilkades-info-riwayatpendidikan-box h4 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpendidikan-box-info p {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpekerjaan-title h3 {
+    font-size: 1.2rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box h4 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 916px) {
+  .profilkades-all {
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  /* decrease all font, padding, img size */
+  .profilkades {
+    padding: 2rem 2rem;
+  }
+  .profilkades-left {
+    padding: 1rem 1rem;
+  }
+  .profilkades-title h2 {
+    font-size: 1rem;
+  }
+  .profilkades-img {
+    margin-bottom: 20px;
+  }
+  .profilkades-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .profilkades-kategoriall {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .profilkades-kategori button {
+    padding: 0.8rem 0.8rem;
+  }
+  .profilkades-kategori button h4 {
+    font-size: 0.6rem;
+  }
+  .profilkades-kategori .profilkades-dataumum button {
+    border-radius: 10px 0 0 10px;
+  }
+  .profilkades-kategori .profilkades-riwayatpekerjaan button {
+    border-radius: 0 10px 10px 0;
+  }
+  .profilkades-info-dataumum-title h3 {
+    font-size: 1rem;
+  }
+  .profilkades-info-dataumum-boxinfo-title h4 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-dataumum-boxinfo-info p {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpendidikan-title h3 {
+    font-size: 1rem;
+  }
+  .profilkades-info-riwayatpendidikan-box h4 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpendidikan-box-info p {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpekerjaan-title h3 {
+    font-size: 1rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box h4 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box-info p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* decrease all font, padding, img size */
+  .profilkades-info-dataumum,
+  .profilkades-info-riwayatpendidikan,
+  .profilkades-info-riwayatpekerjaan {
+    width: 100%;
+  }
+  .profilkades {
+    padding: 2rem 1rem;
+  }
+  .profilkades-left {
+    padding: 1rem 1rem;
+  }
+  .profilkades-title h2 {
+    font-size: 0.8rem;
+  }
+  .profilkades-img {
+    margin-bottom: 20px;
+  }
+  .profilkades-img img {
+    width: 150px;
+    height: 150px;
+  }
+  .profilkades-kategoriall {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .profilkades-kategori button {
+    padding: 0.8rem 0.8rem;
+  }
+  .profilkades-kategori button h4 {
+    font-size: 0.6rem;
+  }
+  .profilkades-kategori .profilkades-dataumum button {
+    border-radius: 10px 0 0 10px;
+  }
+  .profilkades-kategori .profilkades-riwayatpekerjaan button {
+    border-radius: 0 10px 10px 0;
+  }
+  .profilkades-info-dataumum-title h3 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-dataumum-boxinfo-title h4 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-dataumum-boxinfo-info p {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpendidikan-title h3 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpendidikan-box h4 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpendidikan-box-info p {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpekerjaan-title h3 {
+    font-size: 0.9rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box h4 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box-info p {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  /* decrease all to mobile size */
+  .profilkades-info-dataumum,
+  .profilkades-info-riwayatpendidikan,
+  .profilkades-info-riwayatpekerjaan {
+    width: 100%;
+  }
+  .profilkades {
+    padding: 2rem 1rem;
+  }
+  .profilkades-left {
+    padding: 1rem 1rem;
+  }
+  .profilkades-title h2 {
+    font-size: 0.8rem;
+  }
+  .profilkades-img {
+    margin-bottom: 20px;
+  }
+  .profilkades-img img {
+    width: 150px;
+    height: 150px;
+  }
+  .profilkades-kategoriall {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .profilkades-kategori button {
+    padding: 0.6rem 0.6rem;
+  }
+  .profilkades-kategori button h4 {
+    font-size: 0.5rem;
+  }
+  .profilkades-kategori .profilkades-dataumum button {
+    border-radius: 10px 0 0 10px;
+  }
+  .profilkades-kategori .profilkades-riwayatpekerjaan button {
+    border-radius: 0 10px 10px 0;
+  }
+  .profilkades-info-dataumum-title h3 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-dataumum-boxinfo-title h4 {
+    font-size: 0.6rem;
+  }
+  .profilkades-info-dataumum-boxinfo-info p {
+    font-size: 0.6rem;
+  }
+  .profilkades-info-riwayatpendidikan-title h3 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpendidikan-box h4 {
+    font-size: 0.6rem;
+  }
+  .profilkades-info-riwayatpendidikan-box-info p {
+    font-size: 0.6rem;
+  }
+  .profilkades-info-riwayatpekerjaan-title h3 {
+    font-size: 0.8rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box h4 {
+    font-size: 0.6rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box-info p {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .profilkades-kategori button h4 {
+    font-size: 0.5rem;
+  }
+  .profilkades-kategori .profilkades-dataumum button {
+    border-radius: 10px 0 0 10px;
+  }
+  .profilkades-kategori .profilkades-riwayatpekerjaan button {
+    border-radius: 0 10px 10px 0;
+  }
+  .profilkades-info-dataumum-title h3 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-dataumum-boxinfo-title h4 {
+    font-size: 0.5rem;
+  }
+  .profilkades-info-dataumum-boxinfo-info p {
+    font-size: 0.5rem;
+  }
+  .profilkades-info-riwayatpendidikan-title h3 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpendidikan-box h4 {
+    font-size: 0.5rem;
+  }
+  .profilkades-info-riwayatpendidikan-box-info p {
+    font-size: 0.5rem;
+  }
+  .profilkades-info-riwayatpekerjaan-title h3 {
+    font-size: 0.7rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box h4 {
+    font-size: 0.5rem;
+  }
+  .profilkades-info-riwayatpekerjaan-box-info p {
+    font-size: 0.5rem;
+  }
+}

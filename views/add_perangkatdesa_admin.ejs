@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Desa</a>
+              </li>
+              <li class="perangkatdesa mark" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li class="pelayanan" id="pelayanan">
+                <a href="/pelayanan_admin"><i class="fa-brands fa-servicestack"></i>Pelayanan</a>
+              </li>
+              <li class="datadesa" id="datadesa">
+                <a href="/datadesa_admin"><i class="fa-solid fa-hard-drive"></i>Data Desa</a>
+              </li>
+              <li>
+                <a href="/login_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3>Rizki Hanif</h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down" id="flexcol">
+                <div class="path">
+                  <div class="path_text">
+                    <span><a href="/perangkatdesa_admin">Perangkat Desa</a> / <a href="/add_perangkatdesa_admin">Tambah Perangkat Desa</a></span>
+                  </div>
+                </div>
+                <div class="form_perangkatdesa_wrapper">
+                  <div class="form_perangkatdesa_title">
+                    <h3>Tambah Perangkat Desa</h3>
+                    <span>Silahkan Isi Formulir Di bawah Jika Ingin Menambah Perangkat Desa</span>
+                  </div>
+                  <form action="/add_perangkat_desa" method="POST" class="form_perangkatdesa" id="form_perangkatdesa" enctype="multipart/form-data">
+                    <div class="form_group valid_red" id="nama_lengkap_box">
+                      <label for="nama_perangkat">Nama Lengkap :</label>
+                      <input type="text" name="nama_perangkat" id="nama_perangkat" placeholder="Silahkan isi nama...." />
+                    </div>
+                    <span class="nama_lengkap_validasi" id="validasi_nama_lengkap"> <i class="fa-solid fa-exclamation-circle"></i> Nama Lengkap Tidak Boleh Kosong, Harus Berupa Karakter </span>
+                    <div class="form_group valid_red" id="jenisjabatan_box">
+                      <label for="detail_jabatan">Jenis Jabatan :</label>
+                      <select name="detail_jabatan" id="detail_jabatan">
+                        <option disabled selected>--Pilih Jenis Jabatan--</option>
+                        <option value="sekretaris">sekretaris</option>
+                        <option value="kasi">kasi</option>
+                        <option value="kadus">kadus</option>
+                        <option value="kaur">kaur</option>
+                      </select>
+                    </div>
+                    <span class="validasi_jenisjabatan" id="validasi_jenisjabatan"> <i class="fa-solid fa-exclamation-circle"></i> Jenis Jabatan Tidak Boleh Kosong </span>
+                    <div class="form_group valid_red" id="jabatan_box">
+                      <label for="jabatan">Detail Jabatan :</label>
+                      <input type="text" name="jabatan" id="jabatan" placeholder="(Contoh : Kepala Dusun Kedungjati)" />
+                    </div>
+                    <span class="validasi_jabatan" id="validasi_jabatan"> <i class="fa-solid fa-exclamation-circle"></i> Detail Jabatan Tidak Boleh Kosong </span>
+                    <div class="form_group valid_red" id="tempatlahir_box">
+                      <label for="ttl">TTL:</label>
+                      <input type="text" name="ttl" id="ttl" placeholder="(Contoh : Tegal, 21 Mei 1967)" />
+                    </div>
+                    <span class="validasi_tempatlahir" id="validasi_tempatlahir"> <i class="fa-solid fa-exclamation-circle"></i> Tempat Lahir Tak Boleh Kosong </span>
+                    <div class="form_group valid_red" id="jeniskelamin_box">
+                      <label for="jeniskelamin">Jenis Kelamin :</label>
+                      <select name="jeniskelamin" id="jeniskelamin">
+                        <option disabled selected>--Pilih Jenis Kelamin--</option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                      </select>
+                    </div>
+                    <span class="validasi_jeniskelamin" id="validasi_jeniskelamin"> <i class="fa-solid fa-exclamation-circle"></i> Jenis Kelamin Wajib Diisi </span>
+                    <div class="form_group valid_red" id="agama_box">
+                      <label for="agama">Agama :</label>
+                      <select name="agama" id="agama">
+                        <option disabled selected>--Pilih Agama--</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Buddha</option>
+                      </select>
+                    </div>
+                    <span class="validasi_agama" id="validasi_agama"> <i class="fa-solid fa-exclamation-circle"></i> Agama Tak Boleh Kosong </span>
+                    <!-- <div class="additional-input valid_red" id="additional-input">
+                      <label for="agamalainnya">Agama Lain :</label>
+                      <input required type="text" name="agamalainnya" id="agamalainnya" placeholder="Silahkan isi agama lainnya..." />
+                    </div> -->
+                    <!-- <span class="validasi_agama2" id="validasi_agama2"> <i class="fa-solid fa-exclamation-circle"></i> Agama Tak Boleh Kosong </span> -->
+                    <div class="form_group valid_red" id="pendidikan_box">
+                      <label for="pendidikan_terakhir">Pendidikan :</label>
+                      <select name="pendidikan_terakhir" id="pendidikan_terakhir">
+                        <option disabled selected>--Pilih Pendidikan--</option>
+                        <option value="SD">SD</option>
+                        <option value="SMP">SMP</option>
+                        <option value="SMA/SMK">SMA/SMK</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="S1">S1</option>
+                        <option value="S2">S2</option>
+                        <option value="S2">S3</option>
+                      </select>
+                    </div>
+                    <span class="validasi_pendidikan" id="validasi_pendidikan"> <i class="fa-solid fa-exclamation-circle"></i> Pendidikan Wajib Dipilih </span>
+                    <div class="form_group valid_red" id="photo2_box">
+                      <label for="photo">Foto :</label>
+                      <input type="file" name="photo" id="photo" />
+                    </div>
+                    <span class="validasi_photo" id="validasi_photo"> <i class="fa-solid fa-exclamation-circle"></i> Foto Wajib diisi </span>
+                    <div class="submit_button">
+                      <button type="submit" id="submit_button"><i class="fa-solid fa-user-plus"></i>Tambah Perangkat Desa</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>

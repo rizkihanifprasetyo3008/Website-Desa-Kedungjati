@@ -1,0 +1,251 @@
+.profilpedes {
+  padding: 4rem 4rem;
+}
+.profilpedes-all {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+}
+.profilpedes-wrapper {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.profilpedes-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.profilpedes-title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.profilpedes-kategori {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.profilpedes-kategori-box {
+  background-color: #dbdfea;
+  border-radius: 1rem;
+}
+.profilpedes-kategori-box button {
+  background-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+}
+.profilpedes-kategori-box button h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+.profilpedes-kategori-box button:hover {
+  background-color: var(--secondary-color3) !important;
+}
+.profilpedes-kategori-box button:hover h4 {
+  color: var(--light-color) !important;
+}
+.profilpedes-kategori-box .sekretaris-desa {
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--secondary-color3);
+  /* border-right: 1px solid var(--light-color); */
+}
+.profilpedes-kategori-box .sekretaris-desa h4 {
+  color: var(--light-color);
+}
+.profilpedes-kategori-box .sekretaris-desa:hover {
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--secondary-color3);
+}
+.profilpedes-kategori-box .sekretaris-desa:hover h4 {
+  color: var(--light-color);
+}
+.profilpedes-kategori-box #kepala-dusun {
+  border-radius: 0 1rem 1rem 0;
+  /* border-left: 1px solid var(--light-color); */
+}
+.profilpedes-kategori-box #kepala-dusun:hover {
+  border-radius: 0 1rem 1rem 0;
+}
+.profilpedes-kategori-box .sekretaris-desa.active {
+  background-color: transparent;
+  border-radius: 1rem 0 0 1rem;
+}
+.profilpedes-kategori-box .sekretaris-desa.active h4 {
+  color: var(--dark-color);
+}
+.profilpedes-kategori-box .kepala-dusun.active {
+  background-color: var(--secondary-color3);
+  border-radius: 0 1rem 1rem 0;
+}
+.profilpedes-kategori-box .kepala-dusun.active h4 {
+  color: var(--light-color);
+}
+.profilpedes-kategori-box .kepala-urusan.active {
+  background-color: var(--secondary-color3);
+  /* border-radius: 1rem 1rem 1rem 1rem; */
+}
+.profilpedes-kategori-box .kepala-urusan.active h4 {
+  color: var(--light-color);
+}
+.profilpedes-kategori-box .kepala-seksi.active {
+  background-color: var(--secondary-color3);
+  /* border-radius: 1rem 1rem 1rem 1rem; */
+}
+.profilpedes-kategori-box .kepala-seksi.active h4 {
+  color: var(--light-color);
+}
+
+/* Profil perangkat desa */
+.profilpedes-sekretaris-desa,
+.profilpedes-kepaladusun,
+.profilpedes-kepalaurusan,
+.profilpedes-kepalaseksi {
+  background-color: #dbdfea;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  margin-bottom: 20px;
+}
+.profilpedes-kepaladusun,
+.profilpedes-kepalaseksi,
+.profilpedes-kepalaurusan {
+  display: none;
+}
+.profilpedes-kepaladusun.active,
+.profilpedes-kepalaseksi.active,
+.profilpedes-kepalaurusan.active {
+  display: block;
+}
+.profilpedes-sekretaris-desa.active {
+  display: none;
+}
+.profilpedes-sekretaris-desa h3,
+.profilpedes-kepaladusun h3,
+.profilpedes-kepalaurusan h3,
+.profilpedes-kepalaseksi h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.profilpedes-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profilpedes-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.profilpedes-info {
+  padding: 2rem 2rem;
+  /* text-align: left !important; */
+  margin-bottom: 50px;
+}
+.profilpedes-info-box {
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #9ba4b5;
+  /* text-align: left !important; */
+}
+.profilpedes-info-box h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  /* text-align: left !important; */
+}
+.profilpedes-info-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-color);
+  /* text-align: left !important; */
+}
+/* End Profil perangkat desa */
+
+@media only screen and (max-width: 975px) {
+  .profilpedes-all {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 705px) {
+  .profilpedes-sekretaris-desa h3,
+  .profilpedes-kepaladusun h3,
+  .profilpedes-kepalaurusan h3,
+  .profilpedes-kepalaseksi h3 {
+    font-size: 1rem;
+  }
+  .profilpedes-info-box h4 {
+    font-size: 0.8rem;
+  }
+  .profilpedes-info-box p {
+    font-size: 0.8rem;
+  }
+  .profilpedes-info {
+    padding: 1rem 1rem;
+  }
+  .profilpedes-wrapper {
+    width: 100%;
+    padding: 1rem;
+  }
+  .profilpedes {
+    padding: 1rem;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .profilpedes-img img {
+    width: 150px;
+    height: 150px;
+  }
+  .profilpedes-info-box h4 {
+    font-size: 0.7rem;
+  }
+  .profilpedes-info-box p {
+    font-size: 0.7rem;
+  }
+  .profilpedes-info {
+    padding: 0.5rem 0.5rem;
+  }
+  .profilpedes-sekretaris-desa h3,
+  .profilpedes-kepaladusun h3,
+  .profilpedes-kepalaurusan h3,
+  .profilpedes-kepalaseksi h3 {
+    font-size: 0.8rem;
+  }
+  .profilpedes-wrapper {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .profilpedes {
+    padding: 0.5rem;
+    margin-top: 20px;
+  }
+  .profilpedes-title h3 {
+    font-size: 1.2rem;
+  }
+  .profilpedes-kategori .profilpedes-kategori-box button h4 {
+    font-size: 0.8rem;
+  }
+}

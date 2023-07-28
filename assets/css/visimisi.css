@@ -1,0 +1,285 @@
+.visimisi {
+  padding: 4rem 5rem;
+}
+
+.visimisi-all {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+}
+
+.visimisi-left {
+  background-color: var(--light-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.visimisi-imgpegawai {
+  /* position: relative; */
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(/img/kedungjati5.jpg);
+  background-size: cover;
+  background-position: 70% 30%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  /* background-attachment: fixed; */
+}
+.visimisi-img {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(/img/kedungjati.jpeg);
+  background-size: cover;
+  background-position: 70% 30%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.visimisi-content {
+  padding: 2rem 0;
+}
+.visimisi-content .visimisi-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.visimisi-content .visimisi-title h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary-color3);
+  padding-bottom: 2rem;
+}
+.visimisi-content .visi,
+.misi {
+  padding-bottom: 2rem;
+}
+
+.visimisi-content .visi h4,
+.misi h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* text-align: center; */
+  color: var(--secondary-color3);
+  padding-bottom: 2rem;
+}
+.visimisi-content .visi .visi-text,
+.misi-text {
+  padding: 0 2rem;
+  text-align: justify;
+}
+.visimisi-content .visi .visi-text p,
+.misi-text p {
+  padding-bottom: 2rem;
+  font-size: 0.9rem;
+}
+.visimisi-content .visi .visi-text h5,
+.misi-text h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary-color3);
+  padding-bottom: 1rem;
+}
+.anothermenu {
+  display: flex;
+  padding: 15px 25px;
+  /* background-color: aqua; */
+}
+.anothermenu ul li {
+  list-style: circle;
+  margin-bottom: 15px;
+}
+.anothermenu ul li a {
+  /* text-decoration: none; */
+  color: var(--secondary-color3);
+  font-size: 1rem;
+  font-weight: 600;
+  transform: translateY(0px);
+}
+.anothermenu ul li a:hover {
+  color: var(--primary-color);
+  transform: translateY(5px);
+}
+
+@media only screen and (max-width: 700px) {
+  /* smaller font and decrease padding */
+  .visimisi {
+    padding: 2rem 4rem;
+  }
+  .visimisi .visimisi-imgpegawai {
+    background-position: 70% 30%;
+  }
+  .visimisi-content .visimisi-title {
+    font-size: 1.5rem;
+  }
+  .visimisi-content .visimisi-title h3 {
+    font-size: 1.5rem;
+  }
+  .visimisi-content .visi h4,
+  .misi h4 {
+    font-size: 1rem;
+  }
+  .visimisi-content .visi .visi-text,
+  .misi-text {
+    padding: 0 1rem;
+  }
+  .visimisi-content .visi .visi-text p,
+  .misi-text p {
+    font-size: 0.8rem;
+  }
+  .visimisi-content .visi .visi-text h5,
+  .misi-text h5 {
+    font-size: 1rem;
+  }
+  .anothermenu ul li a {
+    /* text-decoration: none; */
+    color: var(--secondary-color3);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: translateY(0px);
+  }
+  .anothermenu ul li a:hover {
+    color: var(--primary-color);
+    transform: translateY(5px);
+  }
+}
+@media only screen and (max-width: 450px) {
+  /* smaller font and decrease padding */
+  .visimisi {
+    padding: 2rem 1rem;
+  }
+  .visimisi .visimisi-imgpegawai {
+    background-position: 70% 30%;
+  }
+  .visimisi-content .visimisi-title {
+    font-size: 1.2rem;
+  }
+  .visimisi-content .visimisi-title h3 {
+    font-size: 1.2rem;
+  }
+  .visimisi-content .visi h4,
+  .misi h4 {
+    font-size: 1rem;
+  }
+  .visimisi-content .visi .visi-text,
+  .misi-text {
+    padding: 0 1rem;
+  }
+  .visimisi-content .visi .visi-text p,
+  .misi-text p {
+    font-size: 0.8rem;
+  }
+  .visimisi-content .visi .visi-text h5,
+  .misi-text h5 {
+    font-size: 1rem;
+  }
+  .anothermenu ul li a {
+    /* text-decoration: none; */
+    color: var(--secondary-color3);
+    font-size: 0.6rem;
+    font-weight: 600;
+    transform: translateY(0px);
+  }
+  .anothermenu ul li a:hover {
+    color: var(--primary-color);
+    transform: translateY(5px);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  /* decrease font and padding */
+  .visimisi {
+    padding: 2rem 4rem;
+  }
+  .visimisi .visimisi-imgpegawai {
+    background-position: 70% 30%;
+  }
+  .visimisi-content .visimisi-title {
+    font-size: 1.5rem;
+  }
+  .visimisi-content .visimisi-title h3 {
+    font-size: 1.5rem;
+  }
+  .visimisi-content .visi h4,
+  .misi h4 {
+    font-size: 1rem;
+  }
+  .visimisi-content .visi .visi-text,
+  .misi-text {
+    padding: 0 1rem;
+  }
+  .visimisi-content .visi .visi-text p,
+  .misi-text p {
+    font-size: 0.8rem;
+  }
+  .visimisi-content .visi .visi-text h5,
+  .misi-text h5 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .visimisi-all {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  /* decrease padding */
+  .visimisi {
+    padding: 2rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .visimisi {
+    padding: 2rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 603px) {
+  .visimisi {
+    padding: 2rem 2rem;
+  }
+  /* decrease all font */
+  .visimisi-content .visimisi-title {
+    font-size: 1.2rem;
+  }
+  .visimisi-content .visimisi-title h3 {
+    font-size: 1.2rem;
+  }
+  .visimisi-content .visi h4,
+  .misi h4 {
+    font-size: 1rem;
+  }
+  .visimisi-content .visi .visi-text,
+  .misi-text {
+    padding: 0 1rem;
+  }
+  .visimisi-content .visi .visi-text p,
+  .misi-text p {
+    font-size: 0.8rem;
+  }
+  .visimisi-content .visi .visi-text h5,
+  .misi-text h5 {
+    font-size: 1rem;
+  }
+  /* decrease img size */
+  .visimisi .visimisi-imgpegawai,
+  .visimisi .visimisi-img {
+    background-position: 70% 30%;
+    min-height: 30vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .visimisi {
+    padding: 2rem 1rem;
+  }
+}

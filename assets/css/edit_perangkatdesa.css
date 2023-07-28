@@ -1,0 +1,34 @@
+.nama_lengkap_box.active {
+  border: 1px solid crimson;
+}
+.validasi_nama_perangkats,
+.validasi_jenisjabatans,
+.validasi_jabatans,
+.validasi_tempatlahirs,
+.validasi_jeniskelamins,
+.validasi_agamas,
+.validasi_pendidikans,
+.validasi_imgs {
+  color: red;
+  font-size: 0.7rem;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-right: 10px;
+  width: 78%;
+  margin-top: -10px;
+  display: none;
+}
+.valid_reds.active {
+  border: 1px solid crimson;
+}
+
+.validasi_nama_perangkats.active,
+.validasi_jenisjabatans.active,
+.validasi_jabatans.active,
+.validasi_tempatlahirs.active,
+.validasi_jeniskelamins.active,
+.validasi_agamas.active,
+.validasi_pendidikans.active,
+.validasi_imgs.active {
+  display: block;
+}

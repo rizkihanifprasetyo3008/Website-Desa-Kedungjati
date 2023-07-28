@@ -1,0 +1,199 @@
+<section class="profilkades">
+  <div class="shortcut-links" data-aos="fade-up">
+    <h4>
+      <a href="/" class="links-back">Beranda</a> /
+      <a href="#" class="location-now">Profil Kepala Desa</a>
+    </h4>
+  </div>
+  <div class="profilkades-all" data-aos="fade-up">
+    <div class="profilkades-left">
+      <% kepala_desa.forEach((kepaladesaItem) => { %>
+      <div class="profilkades-title">
+        <h2>Profil Kepala Desa Kedungjati</h2>
+      </div>
+      <div class="profilkades-img">
+        <img src="img/perangkatdesa/<%= kepaladesaItem.photo %>" alt="" />
+      </div>
+      <div class="profilkades-kategoriall">
+        <div class="profilkades-kategoriwrapper">
+          <div class="profilkades-kategori">
+            <div class="profilkades-dataumum" id="profilkades-dataumum">
+              <button type="button" id="data-umum"><h4>Data Umum</h4></button>
+            </div>
+          </div>
+          <div class="profilkades-kategori">
+            <div class="profilkades-riwayatpendidikan" id="profilkades-riwayatpendidikan">
+              <button type="button" id="riwayatpendidikan"><h4>Riwayat Pendidikan</h4></button>
+            </div>
+          </div>
+          <div class="profilkades-kategori">
+            <div class="profilkades-riwayatpekerjaan" id="profilkades-riwayatpekerjaan">
+              <button type="button" id="riwayatpekerjaan"><h4>Riwayat Pekerjaan</h4></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profilkades-wrapper-dataumum" id="profilkades-wrapper-dataumum">
+        <div class="profilkades-info-dataumum">
+          <div class="profilkades-info-dataumum-title">
+            <h3>Data Umum</h3>
+          </div>
+          <div class="profilkades-info-dataumum-info">
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Nama Lengkap</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.nama %></p>
+              </div>
+            </div>
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Tempat, Tanggal Lahir</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.ttl %></p>
+              </div>
+            </div>
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Jenis Kelamin</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.jeniskelamin%></p>
+              </div>
+            </div>
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Agama</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.agama %></p>
+              </div>
+            </div>
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Alamat</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.alamat %></p>
+              </div>
+            </div>
+            <div class="profilkades-info-dataumum-boxinfo">
+              <div class="profilkades-info-dataumum-boxinfo-title">
+                <h4>Pendidikan</h4>
+              </div>
+              <div class="titikdua">
+                <p>:</p>
+              </div>
+              <div class="profilkades-info-dataumum-boxinfo-info">
+                <p><%= kepaladesaItem.pendidikan %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profilkades-wrapper-riwayatpendidikan" id="profilkades-wrapper-riwayatpendidikan">
+        <div class="profilkades-info-riwayatpendidikan">
+          <div class="profilkades-info-riwayatpendidikan-title">
+            <h3>Riwayat Pendidikan</h3>
+          </div>
+          <% rpkades.forEach((rpkadesItem) => { %>
+          <div class="profilkades-info-riwayatpendidikan-box">
+            <h4><%= rpkadesItem.id %></h4>
+            <h4><%= rpkadesItem.pendidikan %></h4>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <div class="profilkades-wrapper-riwayatpekerjaan" id="profilkades-wrapper-riwayatpekerjaan">
+        <div class="profilkades-info-riwayatpekerjaan">
+          <div class="profilkades-info-riwayatpekerjaan-title">
+            <h3>Riwayat Pekerjaan</h3>
+          </div>
+          <% rppkades.forEach((rppkadesItem) => { %>
+          <div class="profilkades-info-riwayatpekerjaan-box">
+            <h4><%= rppkadesItem.id %></h4>
+            <h4><%= rppkadesItem.pekerjaan %></h4>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+    <div class="profilkades-right">
+      <div class="rekomendasi-berita-container">
+        <div class="rekomendasi-berita-wrapper">
+          <div class="rekomendasi-berita-title">
+            <h3>Lihat Profil Lainnya</h3>
+          </div>
+          <div class="anothermenu">
+            <ul>
+              <li><a href="/visimisi">Visi dan Misi</a></li>
+              <li><a href="/profilkades">Profil Kepala Desa</a></li>
+              <li><a href="/profilpedes">Profil Perangkat Desa</a></li>
+              <li><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></li>
+              <!-- <li><a href="/budayadesa">Budaya Desa</a></li> -->
+              <li><a href="/infrastrukturdesa">Infrastruktur Desa</a></li>
+              <li><a href="/petadesa">Peta Desa</a></li>
+              <li><a href="/potensidesa">Potensi Desa</a></li>
+              <li><a href="/pembangunandesa">Pembangunan Desa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let profilkadesDataUmum = document.getElementById("profilkades-dataumum");
+  let buttonDataUmum = document.getElementById("data-umum");
+  let profilkadesRiwayatPendidikan = document.getElementById("profilkades-riwayatpendidikan");
+  let buttonRiwayatPendidikan = document.getElementById("riwayatpendidikan");
+  let profilkadesRiwayatPekerjaan = document.getElementById("profilkades-riwayatpekerjaan");
+  let buttonRiwayatPekerjaan = document.getElementById("riwayatpekerjaan");
+  let profilkadeswrapperDataUmum = document.getElementById("profilkades-wrapper-dataumum");
+  let profilkadeswrapperriwayatpekerjaan = document.getElementById("profilkades-wrapper-riwayatpekerjaan");
+  let profilkadeswrapperriwayatpendidikan = document.getElementById("profilkades-wrapper-riwayatpendidikan");
+
+  buttonRiwayatPendidikan.addEventListener("click", function () {
+    profilkadesRiwayatPendidikan.classList.add("active");
+    profilkadesDataUmum.classList.add("active");
+    profilkadesRiwayatPekerjaan.classList.remove("active");
+    profilkadeswrapperriwayatpendidikan.classList.add("active");
+    profilkadeswrapperDataUmum.classList.add("active");
+    profilkadeswrapperriwayatpekerjaan.classList.remove("active");
+  });
+  buttonRiwayatPekerjaan.addEventListener("click", function () {
+    profilkadesRiwayatPekerjaan.classList.add("active");
+    profilkadesDataUmum.classList.add("active");
+    profilkadesRiwayatPendidikan.classList.remove("active");
+    profilkadeswrapperriwayatpekerjaan.classList.add("active");
+    profilkadeswrapperDataUmum.classList.add("active");
+    profilkadeswrapperriwayatpendidikan.classList.remove("active");
+  });
+  buttonDataUmum.addEventListener("click", function () {
+    profilkadesDataUmum.classList.remove("active");
+    profilkadesRiwayatPendidikan.classList.remove("active");
+    profilkadesRiwayatPekerjaan.classList.remove("active");
+    profilkadeswrapperDataUmum.classList.remove("active");
+    profilkadeswrapperriwayatpendidikan.classList.remove("active");
+    profilkadeswrapperriwayatpekerjaan.classList.remove("active");
+  });
+</script>

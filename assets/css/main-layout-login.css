@@ -1,0 +1,277 @@
+.nav-admin {
+  background-color: var(--secondary-color3);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  /* margin-bottom: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* z-index: 999; */
+}
+
+.nav-admin h3 {
+  color: var(--secondary-color1);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* LOGIN PAGE  */
+.login_admin {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(/img/galeri/img3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.login_admin::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.login_admin_modals {
+  position: relative;
+  z-index: 2;
+  width: 500px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 3px solid var(--secondary-color3);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.85);
+}
+.loginform_modals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+.loginform_modals form {
+  width: 100%;
+}
+.loginform_title {
+  margin-bottom: 50px;
+}
+.loginform_title h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color1);
+  margin-bottom: 10px;
+}
+.loginform_title span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color1);
+}
+.loginform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.loginform_group {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 80%;
+  background-color: var(--secondary-color1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginform_group.class {
+  border: 1px solid var(--primary-color);
+}
+.validation_Form {
+  display: none;
+  align-items: center;
+}
+.validation_Form.class {
+  display: block;
+}
+.validation_Form span {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.validation_Form span i {
+  color: var(--dark-color);
+}
+.loginform_group input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 0.8rem;
+}
+.loginform_group input::placeholder {
+  color: var(--dark-color);
+  font-size: 0.8rem;
+}
+/* login form input onclick background transparent */
+.loginform_group input:focus {
+  outline: none;
+  background-color: transparent;
+}
+.loginform_group i {
+  color: var(--dark-color);
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.submitbutton {
+  margin-top: 60px;
+  width: 80%;
+  background-color: var(--secondary-color1);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--dark-color);
+}
+.submitbutton button {
+  color: var(--secondary-color1);
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  background-color: var(--secondary-color3);
+  transition: 0.3s;
+}
+.submitbutton:hover button {
+  color: var(--dark-color);
+  transition: 0.3s;
+}
+.pathtomainpage {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.pathtomainpage a {
+  color: var(--secondary-color1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.pathtomainpage i {
+  color: var(--secondary-color1);
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+.pathtomainpage:hover a,
+.pathtomainpage:hover i {
+  color: var(--secondary-color2);
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 520px) {
+  /* decrease all padding */
+  .login_admin {
+    padding: 0;
+  }
+  .login_admin_modals {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+  }
+  /* decrease all font */
+  .loginform_title h1 {
+    font-size: 1.2rem;
+  }
+  .loginform_title span {
+    font-size: 0.8rem;
+  }
+  .loginform_group input {
+    font-size: 0.7rem;
+  }
+  .loginform_group i {
+    font-size: 0.8rem;
+  }
+  .submitbutton button {
+    font-size: 0.8rem;
+  }
+  .pathtomainpage a {
+    font-size: 0.7rem;
+  }
+  .pathtomainpage i {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 405px) {
+  .login_admin_modals {
+    width: 350px;
+    height: 400px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .login_admin_modals {
+    width: 300px;
+    height: 400px;
+    margin-top: 30px;
+  }
+  .loginform_group {
+    width: 100%;
+  }
+  .submitbutton {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .login_admin_modals {
+    width: 250px;
+    height: 400px;
+    margin-top: 30px;
+  }
+  .loginform_group {
+    width: 100%;
+  }
+  .submitbutton {
+    width: 100%;
+  }
+  /* decrease all font and padding */
+  .loginform_title h1 {
+    font-size: 1rem;
+  }
+  .loginform_title span {
+    font-size: 0.7rem;
+  }
+  .loginform_group input {
+    font-size: 0.6rem;
+  }
+  .loginform_group i {
+    font-size: 0.7rem;
+  }
+  .submitbutton button {
+    font-size: 0.7rem;
+  }
+  .pathtomainpage a {
+    font-size: 0.6rem;
+  }
+  .pathtomainpage i {
+    font-size: 0.6rem;
+  }
+}
+/* END LOGIN PAGE */

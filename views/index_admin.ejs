@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard mark" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Kepala Desa</a>
+              </li>
+              <li class="perangkatdesa" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/logout_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3><%= NamaAdmin %></h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_up">
+                <!-- <div class="dashboard_modals">
+                  <div class="dashboard_modals_title">
+                    <h3>11.543</h3>
+                    <span>Jumlah Penduduk Desa</span>
+                  </div>
+                  <div class="dashboard_modals_logo">
+                    <i class="fa-solid fa-people-group"></i>
+                  </div>
+                </div>
+                <div class="dashboard_modals">
+                  <div class="dashboard_modals_title">
+                    <h3>25</h3>
+                    <span>Jumlah Berita Desa</span>
+                  </div>
+                  <div class="dashboard_modals_logo">
+                    <i class="fa-regular fa-newspaper"></i>
+                  </div>
+                </div>
+                <div class="dashboard_modals">
+                  <div class="dashboard_modals_title">
+                    <h3>30</h3>
+                    <span>Total Pejabat Desa</span>
+                  </div>
+                  <div class="dashboard_modals_logo">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                </div> -->
+              </div>
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Admin Website Desa</h3>
+                  </div>
+                  <div class="dashboard_modals_addnew">
+                    <a href="/tambahadmin"><i class="fa-solid fa-plus"></i>Tambah Admin Baru</a>
+                  </div>
+                  <div class="dashboard_content_table">
+                    <table class="table_content">
+                      <thead class="dark-color">
+                        <tr>
+                          <th>No</th>
+                          <th>Nama Lengkap</th>
+                          <th>Username</th>
+                          <th>Password</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% let count = 1; %> <% admin.forEach(adminItem => { %>
+                        <tr>
+                          <td><%= count++ %></td>
+                          <td><%= adminItem.nama %></td>
+                          <td><%= adminItem.username %></td>
+                          <td><%= adminItem.password %></td>
+                          <td>
+                            <a href="/delete_admin?id=<%= adminItem.id %>"><i class="fa-solid fa-trash-can"></i></a>
+                          </td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Visi Desa</h3>
+                  </div>
+                  <div class="form_visidesa">
+                    <% visi.forEach(visiItems => { %>
+                    <form id="visi_form" action="/edit_visi" method="POST">
+                      <textarea name="visi" id="visi" cols="30" rows="10" placeholder="Silahkan Isi Visi Desa"><%= visiItems.visi %></textarea>
+                      <div class="submit_button">
+                        <button type="submit" id="submit_button_admin"><i class="fa-solid fa-user-plus"></i>Update Visi</button>
+                      </div>
+                    </form>
+                    <% }) %>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Misi Desa</h3>
+                  </div>
+                  <div class="dashboard_modals_addnew">
+                    <a href="/tambahmisi"><i class="fa-solid fa-plus"></i>Tambah Misi Baru</a>
+                  </div>
+                  <form id="visi_form" action="/edit_misi" method="POST">
+                    <% misi.forEach(misiItems => { %>
+                    <input type="hidden" name="id" value="<%= misiItems.id %>" />
+                    <textarea name="misi[]" id="misi" cols="30" rows="10" placeholder="Silahkan Isi Misi Desa"><%= misiItems.misi %></textarea>
+                    <a href="/deletemisi?id=<%= misiItems.id %>" class="misi-delete"
+                      ><span><i class="fa-solid fa-trash-can"></i>Hapus Misi</span></a
+                    >
+                    <% }) %>
+                    <div class="submit_button">
+                      <button type="submit" id="submit_button_admin"><i class="fa-solid fa-user-plus"></i>Update Misi</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>

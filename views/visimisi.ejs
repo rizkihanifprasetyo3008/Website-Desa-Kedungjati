@@ -1,0 +1,61 @@
+<section class="visimisi">
+  <div class="shortcut-links" data-aos="fade-up">
+    <h4>
+      <a href="/" class="links-back">Beranda</a> /
+      <a href="#" class="location-now">Visi Misi Desa</a>
+    </h4>
+  </div>
+  <div class="visimisi-all" data-aos="fade-up">
+    <div class="visimisi-left">
+      <div class="visimisi-imgpegawai"></div>
+      <div class="visimisi-content">
+        <div class="visimisi-title">
+          <h3>Visi dan Misi Desa Kedungjati</h3>
+        </div>
+        <div class="visi">
+          <h4>Visi</h4>
+          <% if (visi.length > 0) { %>
+          <div class="visi-text">
+            <% visi.forEach((visiItem) => { %>
+            <div class="tagline">
+              <h5><%= visiItem.visi %></h5>
+            </div>
+            <% }) %> <% } %>
+          </div>
+        </div>
+        <div class="misi">
+          <h4>Misi</h4>
+          <% if (misi.length > 0) { %>
+          <div class="misi-text">
+            <% misi.forEach((misiItem) => { %>
+            <p><%= misiItem.misi %></p>
+            <% }) %>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="visimisi-right">
+      <div class="rekomendasi-berita-container">
+        <div class="rekomendasi-berita-wrapper">
+          <div class="rekomendasi-berita-title">
+            <h3>Lihat Profil Lainnya</h3>
+          </div>
+          <div class="anothermenu">
+            <ul>
+              <li><a href="/visimisi">Visi dan Misi</a></li>
+              <li><a href="/profilkades">Profil Kepala Desa</a></li>
+              <li><a href="/profilpedes">Profil Perangkat Desa</a></li>
+              <li><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></li>
+              <!-- <li><a href="/budayadesa">Budaya Desa</a></li> -->
+              <li><a href="/infrastrukturdesa">Infrastruktur Desa</a></li>
+              <li><a href="/petadesa">Peta Desa</a></li>
+              <li><a href="/potensidesa">Potensi Desa</a></li>
+              <li><a href="/pembangunandesa">Pembangunan Desa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

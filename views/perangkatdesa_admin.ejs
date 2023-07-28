@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Kepala Desa</a>
+              </li>
+              <li class="perangkatdesa mark" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/login_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3>Rizki Hanif</h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Profil Perangkat Desa</h3>
+                    <!-- <div class="searchbar">
+                      <input type="text" placeholder="Cari Perangkat Desa..." />
+                      <i class="fa-solid fa-search"></i>
+                    </div> -->
+                  </div>
+                  <div class="dashboard_modals_addnew">
+                    <a href="/add_perangkatdesa_admin"><i class="fa-solid fa-plus"></i>Tambah Perangkat Desa</a>
+                  </div>
+                  <div class="dashboard_content_table">
+                    <table class="table_content">
+                      <thead class="dark-color">
+                        <tr>
+                          <th>No</th>
+                          <th>Nama</th>
+                          <th>Jabatan</th>
+                          <th>Jenis Kelamin</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% let count = 1; %> <% perangkatdesa.forEach(perangkatdesaItem => { %>
+                        <tr>
+                          <td><%= count++ %></td>
+                          <td><%= perangkatdesaItem.nama_perangkat %></td>
+                          <td><%= perangkatdesaItem.jabatan %></td>
+                          <td><%= perangkatdesaItem.jeniskelamin %></td>
+                          <td>
+                            <a href="/edit_perangkatdesa_admin?id=<%= perangkatdesaItem.id %>&nama_perangkat=<%= perangkatdesaItem.nama_perangkat %>&detail_jabatan=<%= perangkatdesaItem.detail_jabatan %>&ttl=<%= perangkatdesaItem.ttl %>&jeniskelamin=<%= perangkatdesaItem.jeniskelamin %>&agama=<%= perangkatdesaItem.agama %>&pendidikan_terakhir=<%= perangkatdesaItem.pendidikan_terakhir %>&photo=<%= perangkatdesaItem.photo %>&jabatan=<%= perangkatdesaItem.jabatan %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="/deleteperangkatdesa?id=<%= perangkatdesaItem.id %>"><i class="fa-solid fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>

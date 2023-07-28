@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Utama Client</title>
+  </head>
+  <body>
+    <section class="landingpage" data-aos="fade-left">
+      <div class="landingpage-content">
+        <div class="landingpage-info">
+          <h2>Official Website <span><%= title %></span></h2>
+          <p>Potensi Desa, Perubahan Yang Gemilang</p>
+          <a href="/sejarahdesa" class="info-btn smooth-scroll">Tentang Desa</a>
+        </div>
+      </div>
+    </section>
+    <section class="sejarah_desa" data-aos="fade-left" id="tentangdesa">
+      <div class="tentang_desa hidden">
+        <span>Tentang Desa</span>
+        <h3>Asal Muasal Desa Kedungjati</h3>
+        <p>Desa Kedungjati merupakan daerah perdesaan yang dilimpahi berkat tanah pertanian yang subur, tumbuhan yang menghijau, di atas tanah yang datar di tumbuhi pepohonan dan semak yang masih lebat.</p>
+        <a href="#">Sejarah Desa</a>
+      </div>
+      <div class="image-container">
+        <img src="img/kedungjati4.jpg" alt="" />
+        <div class="controls">
+          <span class="control-btn" data-src="img/kedungjati4.jpg"></span>
+          <span class="control-btn" data-src="img/kedungjati5.jpg"></span>
+          <span class="control-btn" data-src="img/kedungjati2.jpg"></span>
+        </div>
+      </div>
+      <div class="tentang_desa exist">
+        <span>Tentang Desa</span>
+        <h3>Asal Muasal Desa Kedungjati</h3>
+        <p>Desa Kedungjati merupakan daerah perdesaan yang dilimpahi berkat tanah pertanian yang subur, tumbuhan yang menghijau, di atas tanah yang datar di tumbuhi pepohonan dan semak yang masih lebat.</p>
+        <a href="/sejarahdesa">Sejarah Desa</a>
+      </div>
+    </section>
+    <section class="profilkadesindex" id="profilkades" data-aos="fade-up">
+      <div class="landingpage-title">
+        <h3>Kepala Desa</h3>
+        <h2>Profil Kepala Desa Kedungjati</h2>
+      </div>
+      <% kepala_desa.forEach((kepaladesaItem) => { %>
+      <div class="profilkades_wrapperindex">
+        <div class="profilkades-rightindex">
+          <div class="profilkades-image">
+            <img src="img/perangkatdesa/<%= kepaladesaItem.photo %>" alt="" />
+          </div>
+        </div>
+        <div class="profilkades-leftindex">
+          <div class="profilkades-content">
+            <h3>Profil Kepala Desa</h3>
+            <h2><%= kepaladesaItem.nama %></h2>
+            <p><%= kepaladesaItem.deskripsi%></p>
+            <a href="/profilkades">Lihat Selengkapnya</a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="galeridesa" data-aos="fade-up">
+      <div class="landingpage-title">
+        <h3>Galeri Desa</h3>
+        <h2>Foto-Foto Kegiatan dan Landscape Desa</h2>
+      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper galeridesa-container">
+          <% galeri.forEach((galeriItem) => { %>
+          <div class="swiper-slide galeridesa-wrapper">
+            <div class="box-img">
+              <img src="img/galeri/<%= galeriItem.gambar %>" alt="Village 1" />
+            </div>
+          </div>
+          <% }) %>
+          <!-- <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 2" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div>
+          <div class="galeridesa-wrapper swiper-slide">
+            <div class="box-img">
+              <img src="img/village.jpg" alt="Village 3" />
+            </div>
+          </div> -->
+          <!-- Add more swiper-slide elements for additional images -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swipe-right">
+        <span>Geser Ke Kanan</span>
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </section>
+    <section class="organisasidesa" id="organisasidesa" data-aos="fade-up">
+      <div class="landingpage-title">
+        <h3>Organisasi Desa</h3>
+        <h2>Organisasi dan Perkumpulan Di Desa Kedungjati</h2>
+      </div>
+      <div class="organisasidesa-box-container">
+        <% organisasi.forEach(organisasiItems => { %>
+        <div class="organisasidesa-box">
+          <div class="organisasidesa-img">
+            <img src="/img/<%= organisasiItems.logo_organisasi %>" alt="" />
+          </div>
+          <div class="organisasidesa-content">
+            <a href="/organisasidesa?id=<%= organisasiItems.id %>" class="link"><%= organisasiItems.organisasi %></a>
+            <p><%= organisasiItems.deskripsisingkat %></p>
+            <div class="organisasidesa-content-btn">
+              <a href="/organisasidesa?id=<%= organisasiItems.id %>">Lihat Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll(".sejarah_desa .image-container .controls .control-btn").forEach((btn) => {
+        btn.onclick = () => {
+          let src = btn.getAttribute("data-src");
+          document.querySelector(" .sejarah_desa .image-container img").src = src;
+        };
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var scrollLinks = document.querySelectorAll(".smooth-scroll");
+
+        for (var i = 0; i < scrollLinks.length; i++) {
+          scrollLinks[i].addEventListener("click", function (event) {
+            event.preventDefault();
+            var target = document.querySelector(this.getAttribute("href"));
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard mark" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Kepala Desa</a>
+              </li>
+              <li class="perangkatdesa" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/logout_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3><%= NamaAdmin %></h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down">
+                <div class="path">
+                  <div class="path_text">
+                    <span><a href="/">Dashboard</a> / <a href="/tambahmisi">Tambah Misi</a></span>
+                  </div>
+                </div>
+                <div class="form_perangkatdesa_wrapper">
+                  <div class="form_perangkatdesa_title">
+                    <h3>Tambah Misi Baru</h3>
+                    <span>Silahkan isi formulir di bawah jika ingin menambah misi baru</span>
+                  </div>
+                  <form method="POST" action="/tambahmisidesa" class="form_tambahadmin" id="form_tambahadmin">
+                    <div class="form_group riwayatbox" id="riwayatbox">
+                      <label for="riwayatpendidikan">Misi</label>
+                      <input type="text" name="misi" id="riwayatpekerjaan" placeholder=": Masukkan Misi Desa Baru" />
+                    </div>
+                    <span class="validasi_riwayat" id="validasi_riwayat"> <i class="fa-solid fa-exclamation-circle"></i> Misi Desa tak boleh kosong </span>
+                    <div class="submit_button">
+                      <button type="submit" id="submit_button_riwayat"><i class="fa-solid fa-user-plus"></i>Tambah Misi Desa</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const riwayatbox = document.getElementById("riwayatbox");
+      const validasi_riwayat = document.getElementById("validasi_riwayat");
+      const submit_button_riwayat = document.getElementById("submit_button_riwayat");
+      const inputriwayat = document.getElementById("riwayatpekerjaan");
+
+      function riwayatvalidasi() {
+        if (inputriwayat.value == "") {
+          validasi_riwayat.classList.add("active");
+          riwayatbox.classList.add("active");
+        } else {
+          validasi_riwayat.classList.remove("active");
+          riwayatbox.classList.remove("active");
+        }
+      }
+
+      submit_button_riwayat.addEventListener("click", (e) => {
+        e.preventDefault();
+        riwayatvalidasi();
+
+        if (inputriwayat.value != "") {
+          document.getElementById("form_tambahadmin").submit();
+        }
+      });
+    </script>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>

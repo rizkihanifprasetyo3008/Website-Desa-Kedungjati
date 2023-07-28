@@ -1,0 +1,16 @@
+.riwayatbox.active {
+  border: 1px solid crimson;
+}
+.validasi_riwayat {
+  color: red;
+  font-size: 0.7rem;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-right: 10px;
+  width: 78%;
+  margin-top: -10px;
+  display: none;
+}
+.validasi_riwayat.active {
+  display: block;
+}

@@ -1,0 +1,70 @@
+#title-profildesa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_perangkatdesa_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#photoLabel {
+  display: flex;
+}
+
+.photokades img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.photokades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photokades p {
+  margin-right: 10px;
+  padding: 0;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+#submit_button_kades:hover {
+  color: var(--secondary-color2);
+}
+#submit_button_kades:hover i {
+  color: var(--secondary-color2);
+}
+
+.box-red.active {
+  border: 1px solid crimson;
+}
+.namakades_validasi,
+.ttlkades_validasi,
+.alamatkades_validasi,
+.pendidikankades_validasi,
+.photovalidasi {
+  color: crimson;
+  font-size: 0.7rem;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-right: 10px;
+  width: 78%;
+  margin-top: -10px;
+  display: none;
+}
+.namakades_validasi.active,
+.ttlkades_validasi.active,
+.alamatkades_validasi.active,
+.pendidikankades_validasi.active,
+.photovalidasi.active {
+  display: block;
+}

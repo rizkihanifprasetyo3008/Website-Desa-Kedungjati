@@ -1,0 +1,57 @@
+<section class="visimisi">
+  <div class="shortcut-links" data-aos="fade-up">
+    <h4>
+      <a href="/" class="links-back">Beranda</a> /
+      <a href="#" class="location-now">Organisasi Desa</a>
+    </h4>
+  </div>
+  <div class="visimisi-all" data-aos="fade-up">
+    <div class="visimisi-left">
+      <div class="sejarahdesa-title">
+        <h3><%= organisasi.organisasi %></h3>
+      </div>
+      <div class="sejarahdesa-imgbox">
+        <div class="sejarahdesa-img">
+          <img src="/img/<%= organisasi.logo_organisasi %>" alt="" />
+        </div>
+        <div class="sejarahdesa-img">
+          <img src="/img/<%= organisasi.photo_kegiatan %>" alt="" />
+        </div>
+      </div>
+      <div class="sejarahdesa-paragraf">
+        <p><%= organisasi.paragraf1 %></p>
+      </div>
+      <div class="sejarahdesa-paragraf">
+        <p><%= organisasi.paragraf2 %></p>
+      </div>
+      <div class="pembangunandesa-img">
+        <img src="img/<%= organisasi.struktur %>" alt="" />
+      </div>
+      <div class="sejarahdesa-paragraf">
+        <p><%= organisasi.paragraf3 %></p>
+      </div>
+    </div>
+    <div class="visimisi-right">
+      <div class="rekomendasi-berita-container">
+        <div class="rekomendasi-berita-wrapper">
+          <div class="rekomendasi-berita-title">
+            <h3>Lihat Profil Lainnya</h3>
+          </div>
+          <div class="anothermenu">
+            <ul>
+              <li><a href="/visimisi">Visi dan Misi</a></li>
+              <li><a href="/profilkades">Profil Kepala Desa</a></li>
+              <li><a href="/profilpedes">Profil Perangkat Desa</a></li>
+              <li><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></li>
+              <!-- <li><a href="/budayadesa">Budaya Desa</a></li> -->
+              <li><a href="/infrastrukturdesa">Infrastruktur Desa</a></li>
+              <li><a href="/petadesa">Peta Desa</a></li>
+              <li><a href="/potensidesa">Potensi Desa</a></li>
+              <li><a href="/pembangunandesa">Pembangunan Desa</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

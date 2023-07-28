@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Desa</a>
+              </li>
+              <li class="perangkatdesa mark" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/login_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3>Rizki Hanif</h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down" id="flexcol">
+                <div class="path">
+                  <div class="path_text">
+                    <span><a href="/perangkatdesa_admin">Perangkat Desa</a> / <a href="/edit_perangkatdesa_admin">Edit Perangkat Desa</a></span>
+                  </div>
+                </div>
+                <div class="form_perangkatdesa_wrapper">
+                  <div class="form_perangkatdesa_title">
+                    <h3>Edit Perangkat Desa</h3>
+                    <span>Silahkan Isi Formulir Di bawah Jika Ingin Mengedit Perangkat Desa</span>
+                  </div>
+                  <div class="form_img">
+                    <img src="/img/perangkatdesa/<%= photo %>" alt="" />
+                  </div>
+                  <form action="/edit_perangkatdesa" method="POST" class="form_perangkatdesa" id="form_perangkatdesa" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<%= id %>">
+                    <div class="form_group valid_reds" id="nama_lengkap_boxs">
+                      <label for="nama_perangkat">Nama Lengkap :</label>
+                      <input type="text" name="nama_perangkat" id="nama_perangkat" placeholder="Silahkan isi nama...." value="<%= nama_perangkat %>" />
+                    </div>
+                    <span class="validasi_nama_perangkats" id="validasi_nama_perangkats"> <i class="fa-solid fa-exclamation-circle"></i> Nama Lengkap Tidak Boleh Kosong, Harus Berupa Karakter </span>
+                    <div class="form_group valid_reds" id="jenisjabatan_boxs">
+                      <label for="detail_jabatan">Jenis Jabatan :</label>
+                      <select name="detail_jabatan" id="detail_jabatan">
+                        <option disabled>--Pilih Jenis Jabatan--</option>
+                        <option value="sekretaris" <%= detail_jabatan === 'sekretaris' ? 'selected' : '' %>>sekretaris</option>
+                        <option value="kasi" <%= detail_jabatan === 'kasi' ? 'selected' : '' %>>kasi</option>
+                        <option value="kadus" <%= detail_jabatan === 'kadus' ? 'selected' : '' %>>kadus</option>
+                        <option value="kaur" <%= detail_jabatan === 'kaur' ? 'selected' : '' %>>kaur</option>
+                      </select>
+                    </div>
+                    <span class="validasi_jenisjabatans" id="validasi_jenisjabatans"> <i class="fa-solid fa-exclamation-circle"></i> Jabatan Tidak Boleh Kosong </span>
+                    <div class="form_group valid_reds" id="jabatan_boxs">
+                      <label for="jabatan">Detail Jabatan :</label>
+                      <input type="text" name="jabatan" id="jabatan" placeholder="(Contoh : Kepala Dusun Kedungjati)" value="<%= jabatan %>" />
+                    </div>
+                    <span class="validasi_jabatans" id="validasi_jabatans"> <i class="fa-solid fa-exclamation-circle"></i> Jabatan Tidak Boleh Kosong </span>
+                    <div class="form_group valid_reds" id="tempatlahir_boxs">
+                      <label for="ttl">TTL:</label>
+                      <input type="text" name="ttl" id="ttl" placeholder="(Contoh : Tegal, 21 Mei 1967)" value=" <%= ttl %> " />
+                    </div>
+                    <span class="validasi_tempatlahirs" id="validasi_tempatlahirs"> <i class="fa-solid fa-exclamation-circle"></i> TTL Tak Boleh Kosong </span>
+                    <div class="form_group valid_reds" id="jeniskelamin_boxs">
+                      <label for="jenis_kelamin">Jenis Kelamin :</label>
+                      <select name="jeniskelamin" id="jeniskelamin">
+                        <option disabled>--Pilih Jenis Kelamin--</option>
+                        <option value="Laki-Laki" <%= jeniskelamin === 'Laki-Laki' ? 'selected' : '' %>>Laki-Laki</option>
+                        <option value="Perempuan" <%= jeniskelamin === 'Perempuan' ? 'selected' : '' %>>Perempuan</option>
+                      </select>
+                    </div>
+                    <span class="validasi_jeniskelamins" id="validasi_jeniskelamins"> <i class="fa-solid fa-exclamation-circle"></i> Jenis Kelamin Wajib Diisi </span>
+                    <div class="form_group valid_reds" id="agama_boxs">
+                      <label for="agama">Agama :</label>
+                      <select name="agama" id="agama">
+                        <option disabled>--Pilih Agama--</option>
+                        <option value="Islam" <%= agama === 'Islam' ? 'selected' : '' %>>Islam</option>
+                        <option value="Kristen" <%= agama === 'Kristen' ? 'selected' : '' %>>Kristen</option>
+                        <option value="Hindu" <%= agama === 'Hindu' ? 'selected' : '' %>>Hindu</option>
+                        <option value="Buddha" <%= agama === 'Buddha' ? 'selected' : '' %>>Buddha</option>
+                      </select>
+                    </div>
+                    <span class="validasi_agamas" id="validasi_agamas"> <i class="fa-solid fa-exclamation-circle"></i> Agama Tak Boleh Kosong </span>
+                    <!-- <div class="additional-input valid_reds" id="additional-input">
+                      <label for="agamalainnya">Agama Lain :</label>
+                      <input required type="text" name="agamalainnya" id="agamalainnya" placeholder="Silahkan isi agama lainnya..." />
+                    </div> -->
+                    <div class="form_group valid_reds" id="pendidikan_boxs">
+                      <label for="pendidikan_terakhir">Pendidikan :</label>
+                      <select name="pendidikan_terakhir" id="pendidikan_terakhir">
+                        <option disabled>--Pilih Pendidikan--</option>
+                        <option value="SD" <%= pendidikan_terakhir === 'SD' ? 'selected' : '' %>>SD</option>
+                        <option value="SMP" <%= pendidikan_terakhir === 'SMP' ? 'selected' : '' %>>SMP</option>
+                        <option value="SMA/SMK" <%= pendidikan_terakhir === 'SMA/SMK' ? 'selected' : '' %>>SMA/SMK</option>
+                        <option value="Diploma" <%= pendidikan_terakhir === 'Diploma' ? 'selected' : '' %>>Diploma</option>
+                        <option value="S1" <%= pendidikan_terakhir === 'S1' ? 'selected' : '' %>>S1</option>
+                        <option value="S2" <%= pendidikan_terakhir === 'S2' ? 'selected' : '' %>>S2</option>
+                        <option value="S3" <%= pendidikan_terakhir === 'S3' ? 'selected' : '' %>>S3</option>
+                      </select>
+                    </div>
+                    <span class="validasi_pendidikans" id="validasi_pendidikans"> <i class="fa-solid fa-exclamation-circle"></i> Pendidikan Wajib Dipilih </span>
+                    <div class="form_group valid_reds" id="img_boxs">
+                      <label for="photo">Foto :</label>
+                      <input type="file" name="photo" id="photo" />
+                    </div>
+                    <span class="validasi_imgs" id="validasi_imgs"> <i class="fa-solid fa-exclamation-circle"></i> Photo Wajib Diisi </span>
+                    <div class="submit_button">
+                      <button type="submit" id="submit_button_perangkatdesa"><i class="fa-solid fa-user-plus"></i>Edit Perangkat Desa</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const nama_lengkap_boxs = document.getElementById('nama_lengkap_boxs');
+      const input_nama_lengkaps = document.getElementById('nama_perangkat');
+      const validasi_nama_lengkaps = document.getElementById('validasi_nama_perangkats');
+      const submit_button_perangkatdesa = document.getElementById('submit_button_perangkatdesa');
+
+      const jenis_jabatan_boxs = document.getElementById('jenis_jabatan_boxs');
+      const input_jenis_jabatans = document.getElementById('detail_jabatan');
+      const validasi_jenis_jabatans = document.getElementById('validasi_jenisjabatans');
+      
+      const jabatan_boxs = document.getElementById('jabatan_boxs');
+      const input_jabatan = document.getElementById('jabatan');
+      const validasi_jabatans = document.getElementById('validasi_jabatans');
+
+      const ttl_boxs = document.getElementById('tempatlahir_boxs');
+      const input_ttl = document.getElementById('ttl');
+      const validasi_ttl = document.getElementById('validasi_tempatlahirs');
+
+      const photo_boxs = document.getElementById('img_boxs');
+      const input_photo = document.getElementById('photo');
+      const validasi_photo = document.getElementById('validasi_imgs');
+
+
+      
+
+      function validasinamaperangkat(){
+        if(input_nama_lengkaps.value === ''){
+          nama_lengkap_boxs.classList.add('active');
+          validasi_nama_lengkaps.classList.add('active');
+        }else{
+          nama_lengkap_boxs.classList.remove('active');
+          validasi_nama_lengkaps.classList.remove('active');
+        }
+      }
+      function validasijabatans(){
+        if(input_jabatan.value === ''){
+          jabatan_boxs.classList.add('active');
+          validasi_jabatans.classList.add('active');
+        }else{
+          jabatan_boxs.classList.remove('active');
+          validasi_jabatans.classList.remove('active');
+        }
+      }
+
+      function ttlvalidasi(){
+        if(input_ttl.value === ''){
+          ttl_boxs.classList.add('active');
+          validasi_ttl.classList.add('active');
+        }else{
+          ttl_boxs.classList.remove('active');
+          validasi_ttl.classList.remove('active');
+        }
+      }
+
+      function photovalidasi(){
+        if(input_photo.value === ''){
+          photo_boxs.classList.add('active');
+          validasi_photo.classList.add('active');
+        }else{
+          photo_boxs.classList.remove('active');
+          validasi_photo.classList.remove('active');
+        }
+      }
+
+      submit_button_perangkatdesa.addEventListener('click', function(e){
+        e.preventDefault();
+        validasinamaperangkat();
+        validasijabatans();
+        ttlvalidasi();
+        photovalidasi();
+
+        if(input_nama_lengkaps.value !== '' && input_jabatan.value !== '' && input_ttl.value !== '' && input_photo.value !== ''){
+          document.getElementById('form_perangkatdesa').submit();
+        }
+      })
+    </script>
+    <!-- <script defer src="/js/adminscript.js"></script> -->
+  </body>
+</html>

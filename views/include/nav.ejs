@@ -1,0 +1,320 @@
+<!-- NAVIGATION BAR SECTION -->
+<section class="navbar-upper">
+  <div class="navbar-upper-container" data-aos="fade-left">
+    <!-- <div class="navbar-upper-left">
+      <div class="navbar-socialmedia">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+    <div class="navbar-upper-mid" data-aos="fade-left">
+      <h3><%= title %></h3>
+    </div>
+    <div class="navbar-upper-right">
+      <a href="#" class="notexist"><i class="fa-solid fa-search" id="search-btn"></i></a>
+      <div class="searchbar-container" id="searchbar-container">
+        <div class="searchbar notexist">
+          <input type="text" placeholder="Cari Info Desa... (Pelayanan, Profil, Berita, Data Desa)" />
+          <div class="x-bar">
+            <i class="fa-solid fa-times" id="close-btn"></i>
+          </div>
+        </div>
+      </div>
+      <div class="desa-logo">
+        <a href="/"><img src="/img/logotegal.png" alt="logo" /></a>
+      </div>
+      <!-- hamburger menu -->
+      <a href="#" class="hamburger-menu" id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="navbar-bot" data-aos="fade-left">
+  <div class="navbar-bot-container">
+    <div class="navbar-bot-menu">
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li id="hover-arrow-profildesa">
+          <a href="#" id="menu-profildesa">Perangkat Desa<i class="fa-solid fa-sort-down" id="down-profildesa"></i><i class="fa-solid fa-sort-up" id="up-profildesa"></i></a>
+          <div class="sub-menu-profildesa-container" id="sub-menu-profildesa">
+            <div class="sub-menu-profildesa">
+              <h3><a href="/visimisi">Visi dan Misi</a></h3>
+              <h3><a href="/profilkades">Profil Kepala Desa</a></h3>
+              <h3><a href="/profilpedes">Profil Perangkat Desa</a></h3>
+            </div>
+          </div>
+        </li>
+        <li id="hover-arrow-pelayanan">
+          <a href="#" id="menu-pelayanan">Tentang Desa<i class="fa-solid fa-sort-down" id="down"></i><i class="fa-solid fa-sort-up" id="up"></i></a>
+          <div class="sub-menu-pelayanan-container" id="sub-menu-pelayanan">
+            <div class="sub-menu-pelayanan">
+              <h3><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></h3>
+              <!-- <h3><a href="/budayadesa">Budaya Desa</a></h3> -->
+              <h3><a href="/infrastrukturdesa">Infrastruktur dan Fasilitas Umum</a></h3>
+              <h3><a href="/petadesa">Peta Desa</a></h3>
+              <h3><a href="/potensidesa">Potensi Desa</a></h3>
+              <!-- <h3><a href="/pembangunandesa">Strategi Pembangunan Desa</a></h3> -->
+            </div>
+          </div>
+        </li>
+        <li id="hover-arrow-datadesa">
+          <a href="/pembangunandesa" id="menu-datadesa"> Strategi Pembangunan Desa </a>
+          <!-- <div class="sub-menu-datadesa-container" id="sub-menu-datadesa">
+              <div class="sub-menu-datadesa">
+                <h3><a href="#">Data Penduduk</a></h3>
+                <h3><a href="#">Peraturan Desa</a></h3>
+                <h3><a href="#">Keputusan Kepala Desa</a></h3>
+                <h3><a href="#">Keuangan Desa</a></h3>
+                <h3><a href="#">Potensi Desa</a></h3>  
+            </div> -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-hamburger-menu-all" id="navbar-hamburger-menu-all">
+    <div class="navbar-hamburger-menu" id="navbar-hamburger-menu">
+      <div class="navbar-hamburger-menu-container" id="navbar-hamburger-menu-container">
+        <div class="hamburger-menu-top">
+          <div class="hamburger-title">
+            <h3><%= title %></h3>
+            <p>Potensi Desa, Perubahan Yang Gemilang</p>
+          </div>
+          <div class="hamburger-xsign" id="hamburger-xsign">
+            <i class="fa-solid fa-times" id="close-hamburger-btn"></i>
+          </div>
+        </div>
+        <div class="hamburger-items-menu">
+          <ul class="hamburger-items-ul">
+            <li><a href="/">Beranda</a></li>
+            <li id="Sprofildesa" class="Sprofildesa"><a href="#">Perangkat Desa</a><i class="fa-solid fa-sort-down" id="down-Sprofildesa"></i><i class="fa-solid fa-sort-up" id="up-Sprofildesa"></i></li>
+            <div class="sub-hamburger-profildesa-container" id="sub-hamburger-profildesa-container">
+              <p><a href="/visimisi">Visi dan Misi</a></p>
+              <p><a href="/profilkades">Profil Kepala Desa</a></p>
+              <p><a href="/profilpedes">Profil Perangkat Desa</a></p>
+            </div>
+            <li id="Spelayanan"><a href="#">Tentang Desa</a><i class="fa-solid fa-sort-down" id="down-Spelayanan"></i><i class="fa-solid fa-sort-up" id="up-Spelayanan"></i></li>
+            <div class="sub-hamburger-pelayanan-container" id="sub-hamburger-pelayanan-container">
+              <p><a href="/sejarahdesa">Sejarah dan Budaya Desa</a></p>
+              <!-- <p><a href="/budayadesa">Budaya Desa</a></p> -->
+              <p><a href="/infrastrukturdesa">Infrastuktur dan Fasilitas Umum</a></p>
+              <p><a href="/petadesa">Peta Desa</a></p>
+              <p><a href="/potensidesa">Potensi Desa</a></p>
+              <p><a href="/pembangunandesa">Strategi Pembangunan Desa</a></p>
+            </div>
+            <li id="Sdatadesa">
+              <a href="/pembangunandesa">Strategi Pembangunan Desa</a>
+              <!-- <i class="fa-solid fa-sort-down" id="down-Sdatadesa"></i><i class="fa-solid fa-sort-up" id="up-Sdatadesa"></i></li> -->
+              <!-- <div class="sub-hamburger-datadesa-container" id="sub-hamburger-datadesa-container">
+              <p><a href="#">Data Penduduk</a></p>
+              <p><a href="#">Peraturan Desa</a></p>
+              <p><a href="#">Keputusan Kepala Desa</a></p>
+              <p><a href="#">Keuangan Desa</a></p>
+              <p><a href="#">Potensi Desa</a></p>
+            </div> -->
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="hamburger-items-social">
+          <ul class="hamburger-items-social-ul">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END NAVIGATION BAR SECTION -->
+
+<script>
+  // SUB MENU PELAYANAN
+  const menuPelayanan = document.getElementById("menu-pelayanan");
+  const subMenuPelayanan = document.getElementById("sub-menu-pelayanan");
+  const arrowmenupelayanan = document.getElementById("hover-arrow-pelayanan");
+  const down = document.getElementById("down");
+  const up = document.getElementById("up");
+
+  menuPelayanan.addEventListener("mouseover", () => {
+    subMenuPelayanan.classList.toggle("active");
+  });
+  arrowmenupelayanan.addEventListener("mouseover", () => {
+    down.style.display = "none";
+    up.style.display = "block";
+  });
+  arrowmenupelayanan.addEventListener("mouseout", () => {
+    down.style.display = "block";
+    up.style.display = "none";
+  });
+  // END SUB MENU PELAYANAN
+
+  // SUB MENU DATA DESA
+
+  const menudatadesa = document.getElementById("menu-datadesa");
+  const submenudatadesa = document.getElementById("sub-menu-datadesa");
+  const arrowmenudatadesa = document.getElementById("hover-arrow-datadesa");
+  const downdatadesa = document.getElementById("down-datadesa");
+  const updatadesa = document.getElementById("up-datadesa");
+
+  menudatadesa.addEventListener("mouseover", () => {
+    // add class active
+    submenudatadesa.classList.toggle("active");
+  });
+
+  arrowmenudatadesa.addEventListener("mouseover", () => {
+    downdatadesa.style.display = "none";
+    updatadesa.style.display = "block";
+  });
+
+  arrowmenudatadesa.addEventListener("mouseout", () => {
+    downdatadesa.style.display = "block";
+    updatadesa.style.display = "none";
+  });
+
+  // END SUB MENU DATA DESA
+
+  // SUB MENU PROFIL DESA
+  const menuprofildesa = document.getElementById("menu-profildesa");
+  const submenuprofildesa = document.getElementById("sub-menu-profildesa");
+  const arrowmenuprofildesa = document.getElementById("hover-arrow-profildesa");
+  const downprofildesa = document.getElementById("down-profildesa");
+  const upprofildesa = document.getElementById("up-profildesa");
+
+  menuprofildesa.addEventListener("mouseover", () => {
+    // add class active
+    submenuprofildesa.classList.toggle("active");
+  });
+
+  arrowmenuprofildesa.addEventListener("mouseover", () => {
+    downprofildesa.style.display = "none";
+    upprofildesa.style.display = "block";
+  });
+
+  arrowmenuprofildesa.addEventListener("mouseout", () => {
+    downprofildesa.style.display = "block";
+    upprofildesa.style.display = "none";
+  });
+  // END SUB MENU PROFIL DESA
+
+  // SEARCH BAR BUTTON
+  const searchButton = document.getElementById("search-btn");
+  const searchcontainer = document.getElementById("searchbar-container");
+  const closebtn = document.getElementById("close-btn");
+
+  searchButton.addEventListener("click", () => {
+    searchcontainer.classList.add("active");
+  });
+
+  closebtn.addEventListener("click", () => {
+    // remove class active
+    searchcontainer.classList.remove("active");
+  });
+  // END SEARCH BAR BUTTON
+
+  // HAMBURGER MENU
+  const navbarhamburgermenu = document.getElementById("navbar-hamburger-menu");
+  const hamburgerxsign = document.getElementById("hamburger-xsign");
+  const hamburgermenu = document.getElementById("hamburger-menu");
+  const hamburgermenuall = document.getElementById("navbar-hamburger-menu-all");
+
+  hamburgermenu.addEventListener("click", () => {
+    navbarhamburgermenu.classList.add("active");
+    hamburgermenuall.classList.add("active");
+  });
+
+  hamburgerxsign.addEventListener("click", () => {
+    navbarhamburgermenu.classList.remove("active");
+    hamburgermenuall.classList.remove("active");
+  });
+  // PROFIL DESA HAMBURGER MENU
+  const downSprofildesa = document.getElementById("down-Sprofildesa");
+  const upSprofildesa = document.getElementById("up-Sprofildesa");
+  const Sprofildesa = document.getElementById("Sprofildesa");
+
+  Sprofildesa.addEventListener("click", () => {
+    downSprofildesa.style.display = "none";
+    upSprofildesa.style.display = "block";
+  });
+
+  Sprofildesa.addEventListener("dblclick", () => {
+    downSprofildesa.style.display = "block";
+    upSprofildesa.style.display = "none";
+  });
+  // END PROFIL DESA HAMBURGER MENU
+  // PELAYANAN HAMBURGER MENU
+  const downSpelayanan = document.getElementById("down-Spelayanan");
+  const upSpelayanan = document.getElementById("up-Spelayanan");
+  const Spelayanan = document.getElementById("Spelayanan");
+
+  Spelayanan.addEventListener("click", () => {
+    downSpelayanan.style.display = "none";
+    upSpelayanan.style.display = "block";
+  });
+
+  Spelayanan.addEventListener("dblclick", () => {
+    downSpelayanan.style.display = "block";
+    upSpelayanan.style.display = "none";
+  });
+  // END PELAYANAN HAMBURGER MENU
+  // DATA DESA HAMBURGER MENU
+  const downSdatadesa = document.getElementById("down-Sdatadesa");
+  const upSdatadesa = document.getElementById("up-Sdatadesa");
+  const Sdatadesa = document.getElementById("Sdatadesa");
+
+  Sdatadesa.addEventListener("click", () => {
+    downSdatadesa.style.display = "none";
+    upSdatadesa.style.display = "block";
+  });
+
+  Sdatadesa.addEventListener("dblclick", () => {
+    downSdatadesa.style.display = "block";
+    upSdatadesa.style.display = "none";
+  });
+
+  // END DATA DESA HAMBURGER MENU
+
+  // SUB MENU PROFIL DESA HAMBURGER MENU
+  const subprofildesa = document.getElementById("sub-hamburger-profildesa-container");
+
+  Sprofildesa.addEventListener("click", () => {
+    subprofildesa.classList.toggle("active");
+  });
+  // END SUB MENU PROFIL DESA HAMBURGER MENU
+  // SUB MENU PELAYANAN HAMBURGER MENU
+  const subpelayanan = document.getElementById("sub-hamburger-pelayanan-container");
+
+  Spelayanan.addEventListener("click", () => {
+    subpelayanan.classList.toggle("active");
+  });
+  // END SUB MENU PELAYANAN HAMBURGER MENU
+  // SUB MENU DATA DESA HAMBURGER MENU
+  const subdatadesa = document.getElementById("sub-hamburger-datadesa-container");
+
+  Sdatadesa.addEventListener("click", () => {
+    subdatadesa.classList.toggle("active");
+  });
+  //  END SUB MENU DATA DESA HAMBURGER MENU
+  // END HAMBURGER MENU
+</script>

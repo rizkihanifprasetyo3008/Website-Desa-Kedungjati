@@ -1,0 +1,889 @@
+.sejarahdesa {
+  padding: 4rem 6rem;
+}
+.sejarahdesa-all {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+}
+.sejarahdesa-wrapper {
+  align-items: center;
+}
+.sejarahdesa-bungkusall {
+  background-color: var(--light-color);
+  padding: 45px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.sejarahdesa-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sejarahdesa-image img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.sejarahdesa-paragraf span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.sejarahdesa-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sejarahdesa-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.sejarahdesa-info h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.sejarahdesa-info p,
+.sejarahdesa-info2 p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.8;
+}
+.sejarahdesa-description {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sejarahdesa-info2 {
+  margin-top: 100px;
+  /* background-color: aqua; */
+  width: 80%;
+}
+
+.sejarahdesa-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.sejarahdesa-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.rekomendasi-berita-wrapper {
+  background-color: var(--light-color);
+  width: 100%;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.rekomendasi-berita-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px dashed #dbdfea;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.rekomendasi-berita-title h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  justify-content: center;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.rekomendasi-berita-box {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #dbdfea;
+  padding-bottom: 10px;
+}
+.rekomendasi-berita-box .rekomendasi-berita-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rekomendasi-berita-box .rekomendasi-berita-img img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+}
+.rekomendasi-berita-box .rekomendasi-berita-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+.rekomendasi-berita-box .rekomendasi-berita-info h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  justify-content: center;
+  color: var(--dark-color);
+  /* margin-bottom: 20px; */
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+}
+.rekomendasi-berita-box .rekomendasi-berita-info p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  justify-content: center;
+  color: var(--dark-color);
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+}
+
+.rekomendasi-berita-box:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+.rekomendasi-berita-box:hover .rekomendasi-berita-info h4 {
+  color: var(--secondary-color3);
+  transition: all 0.3s ease-in-out;
+}
+
+.sejarah_desa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+  align-items: center;
+}
+.sejarah_desa .image-container {
+  display: grid;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sejarah_desa .image-container img {
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.sejarah_desa .image-container .controls {
+  text-align: center;
+  padding: 2rem 0;
+}
+.sejarah_desa .image-container .controls span {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--dark-color);
+  cursor: pointer;
+  margin: 0.7rem;
+  margin-top: -15px;
+}
+.sejarah_desa .image-container .controls span:hover {
+  background: var(--secondary-color3);
+}
+.tentang_desa {
+  margin-bottom: 3rem;
+}
+.tentang_desa span {
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+}
+.tentang_desa h3 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--secondary-color3);
+  margin-top: 1rem;
+  font-family: var(--secondary-font);
+}
+.tentang_desa p {
+  padding: 1rem 0;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: var(--dark-color);
+  line-height: 2;
+}
+.tentang_desa a {
+  padding: 1rem;
+  background-color: var(--secondary-color3);
+  color: var(--light-color);
+  border-radius: 10px;
+}
+.tentang_desa a:hover {
+  background-color: var(--secondary-color2);
+  color: var(--light-color);
+}
+
+@media only screen and (max-width: 1210px) {
+  .tentang_desa span {
+    color: var(--dark-color);
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+  }
+  .tentang_desa h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin-top: 1rem;
+    font-family: var(--secondary-font);
+    width: 100%;
+  }
+  .tentang_desa p {
+    padding: 1rem 0;
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 0.8rem;
+    color: var(--dark-color);
+    line-height: 2;
+  }
+  .tentang_desa a {
+    padding: 1rem;
+    background-color: var(--secondary-color3);
+    color: var(--light-color);
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .tentang_desa {
+    justify-content: center;
+    text-align: center;
+  }
+  .tentang_desa span {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+  }
+  .tentang_desa h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin-top: 0.8rem;
+    font-family: var(--secondary-font);
+    width: 100%;
+  }
+  .tentang_desa p {
+    padding: 1rem 0;
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 0.7rem;
+    color: var(--dark-color);
+    line-height: 2;
+  }
+  .tentang_desa a {
+    padding: 0.8rem;
+    background-color: var(--secondary-color3);
+    color: var(--light-color);
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+  .sejarah_desa .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .tentang_desa {
+    justify-content: center;
+    text-align: center;
+  }
+  .tentang_desa span {
+    color: var(--dark-color);
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+  }
+  .tentang_desa h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin-top: 0.8rem;
+    font-family: var(--secondary-font);
+    width: 100%;
+  }
+  .tentang_desa p {
+    padding: 1rem 0;
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 0.7rem;
+    color: var(--dark-color);
+    line-height: 2;
+  }
+  .tentang_desa a {
+    padding: 0.8rem;
+    background-color: var(--secondary-color3);
+    color: var(--light-color);
+    border-radius: 10px;
+    font-size: 0.7rem;
+  }
+  .sejarah_desa .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+.hidden {
+  display: none;
+}
+.notexist {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .sejarah_desa {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .hidden {
+    display: block;
+  }
+  .exist {
+    display: none;
+  }
+  .sejarah_desa .image-container .sejarah_desa .image-container img {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  /* decrease padding for all */
+  .sejarahdesa {
+    padding: 4rem 4rem;
+  }
+  /* .sejarahdesa-all {
+      grid-template-columns: 1fr;
+    } */
+  .sejarahdesa-gallery {
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+  }
+  .sejarahdesa-info2 {
+    margin-top: 50px;
+  }
+  .sejarahdesa-info2 p {
+    font-size: 0.9rem;
+  }
+  .sejarahdesa-info2 h2 {
+    font-size: 1.3rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 1.1rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 1.1rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 70px;
+    height: 80px;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.7rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.6rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.8rem;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .sejarahdesa-all {
+    grid-template-columns: 1fr;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 100px;
+    height: 80px;
+  }
+  .rekomendasi-berita-box {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #dbdfea;
+    padding-bottom: 10px;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 9rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.8rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.7rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .rekomendasi-berita-box {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #dbdfea;
+    padding-bottom: 10px;
+    gap: 1.5rem;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 7rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.7rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.6rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .sejarahdesa-gallery {
+    padding: 2rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  /* decrease font and padding */
+  .sejarahdesa-info h2 {
+    font-size: 1.3rem;
+  }
+  .sejarahdesa-info h4 {
+    font-size: 1.1rem;
+  }
+  .sejarahdesa {
+    padding: 4rem 2rem;
+  }
+  .sejarahdesa-info2 {
+    margin-top: 30px;
+  }
+  .sejarahdesa-info2 p {
+    font-size: 0.8rem;
+  }
+  .sejarahdesa-info2 h2 {
+    font-size: 1.1rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.9rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.9rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 80px;
+    height: 80px;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.7rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.6rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.8rem;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 545px) {
+  /* decrease font,gap,padding */
+  .sejarahdesa-info h2 {
+    font-size: 1.2rem;
+  }
+  .sejarahdesa-info h4 {
+    font-size: 1rem;
+  }
+  .sejarahdesa {
+    padding: 4rem 1rem;
+  }
+  .sejarahdesa-info2 {
+    margin-top: 30px;
+  }
+  .sejarahdesa-info2 p {
+    font-size: 0.7rem;
+  }
+  .sejarahdesa-info2 h2 {
+    font-size: 1rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.8rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.8rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 70px;
+    height: 70px;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.6rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.5rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.7rem;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  /* decrease font,gap,padding */
+  .sejarahdesa-info h2 {
+    font-size: 1.1rem;
+  }
+  .sejarahdesa-info h4 {
+    font-size: 0.9rem;
+  }
+  .sejarahdesa {
+    padding: 4rem 1rem;
+  }
+  .sejarahdesa-info2 {
+    margin-top: 30px;
+  }
+  .sejarahdesa-info2 p {
+    font-size: 0.6rem;
+  }
+  .sejarahdesa-info2 h2 {
+    font-size: 0.9rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.7rem;
+  }
+  .sejarahdesa-info2 h4 {
+    font-size: 0.7rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 60px;
+    height: 60px;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.5rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.4rem;
+  }
+  .rekomendasi-berita-title h3 {
+    font-size: 0.6rem;
+  }
+  .sejarahdesa-gallery {
+    padding: 2rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 389px) {
+  /* decrease gap,padding,img size */
+  /* .sejarahdesa-info h2 {
+      font-size: 1rem;
+    }
+    .sejarahdesa-info h4 {
+      font-size: 0.8rem;
+    } */
+  .sejarahdesa {
+    padding: 4rem 1rem;
+  }
+  .sejarahdesa-info2 {
+    margin-top: 30px;
+  }
+  /* .sejarahdesa-info2 p {
+      font-size: 0.5rem;
+    }
+    .sejarahdesa-info2 h2 {
+      font-size: 0.8rem;
+    }
+    .sejarahdesa-info2 h4 {
+      font-size: 0.6rem;
+    }
+    .sejarahdesa-info2 h4 {
+      font-size: 0.6rem;
+    } */
+  .rekomendasi-berita-box .rekomendasi-berita-img img {
+    width: 50px;
+    height: 50px;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.4rem;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    font-size: 0.3rem;
+  }
+  /* .rekomendasi-berita-title h3 {
+      font-size: 0.5rem;
+    } */
+  .sejarahdesa-gallery {
+    padding: 2rem 2rem;
+  }
+  .sejarahdesa-gallery img {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .rekomendasi-berita-box {
+    grid-template-columns: 15% 85%;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info h4 {
+    font-size: 0.4rem;
+    width: 90%;
+  }
+  .rekomendasi-berita-box .rekomendasi-berita-info p {
+    width: 90%;
+    font-size: 0.3rem;
+  }
+}
+
+.sejarahdesa-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.sejarahdesa-title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color3);
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondary-font);
+}
+.sejarahdesa-paragraf {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sejarahdesa-paragraf p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0;
+  font-family: var(--tertiary-font);
+}
+.sejarahdesa-header {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sejarahdesa-header h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0;
+  padding: 0;
+  font-family: var(--secondary-font);
+}
+
+.sejarahdesa-imgbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+.sejarahdesa-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.sejarahdesa-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 785px) {
+  .sejarahdesa-imgbox {
+    padding: 0.5rem;
+  }
+  .sejarahdesa-img {
+    height: 100%;
+  }
+  .sejarahdesa-title h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+  .sejarahdesa-paragraf {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5rem;
+  }
+  .sejarahdesa-paragraf p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0;
+    font-family: var(--tertiary-font);
+  }
+  .sejarahdesa-header {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .sejarahdesa-header h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sejarahdesa-imgbox {
+    padding: 0.5rem;
+  }
+  .sejarahdesa-img {
+    height: 100%;
+  }
+  .sejarahdesa-title h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+  .sejarahdesa-paragraf {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5rem;
+  }
+  .sejarahdesa-paragraf p {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0;
+    font-family: var(--tertiary-font);
+  }
+  .sejarahdesa-header {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .sejarahdesa-header h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .sejarahdesa-imgbox {
+    padding: 0rem;
+  }
+  .sejarahdesa-img {
+    height: 100%;
+  }
+  .sejarahdesa-title h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--secondary-color3);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+  .sejarahdesa-paragraf {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .sejarahdesa-paragraf p {
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0;
+    font-family: var(--tertiary-font);
+  }
+  .sejarahdesa-header {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .sejarahdesa-header h4 {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--secondary-font);
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/visimisi.css" />
+    <link rel="stylesheet" href="/css/sejarahdesa.css" />
+    <link rel="stylesheet" href="/css/profilkades.css" />
+    <link rel="stylesheet" href="/css/profilpedes.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/petadesa.css" />
+    <link rel="stylesheet" href="/css/strategipembangunandesa.css" />
+    <link rel="shortcut icon" href="/img/logotegal.png" type="image/x-icon" />
+    <!-- Link AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- END Link AOS Library -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- LINK FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('nav') %>
+    <div class="container"><%- body %></div>
+    <%- include('footer') %>
+    <!-- aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- END aos Script -->
+    <!-- Swiper JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/swiper.js"></script>
+  </body>
+</html>

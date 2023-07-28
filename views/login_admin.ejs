@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Login Admin</title>
+  </head>
+  <body>
+    <section class="login_admin">
+      <div class="login_admin_modals" data-aos="fade-up">
+        <div class="loginform_modals">
+          <form action="/login_admin" method="POST" class="loginform">
+            <div class="loginform_title">
+              <h1>Login Admin</h1>
+              <span>Silahkan isi username dan password di bawah</span>
+            </div>
+            <div class="loginform_group" id="loginform_group">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" name="username" id="username" placeholder="Username Admin..." />
+            </div>
+            <div class="loginform_group" id="loginform_group">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" name="password" id="password" placeholder="Password Admin..." />
+            </div>
+            <div class="validation_Form">
+              <span id="validation_Form"><i class="fa-solid fa-exclamation-circle"></i> Username & Password Salah </span>
+            </div>
+            <div class="submitbutton">
+              <button type="submit" class="btn btn-primary" id="loginadmin">Login Admin</button>
+            </div>
+            <div class="pathtomainpage">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <a href="/">Kembali ke Halaman Utama</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

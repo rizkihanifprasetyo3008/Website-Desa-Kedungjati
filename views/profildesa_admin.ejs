@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <section class="admin_landingpage">
+      <div class="admin_landingpage_left">
+        <div class="admin_menu">
+          <div class="admin_menu_title">
+            <h3><i class="fa-solid fa-house-flag"></i>Desa Kedungjati</h3>
+          </div>
+          <div class="admin_menu_option">
+            <ul>
+              <li class="dashboard" id="dashboard">
+                <a href="/index_admin"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+              </li>
+              <li class="profildesa mark" id="profildesa">
+                <a href="/profildesa_admin"><i class="fa-solid fa-address-card"></i>Profil Kepala Desa</a>
+              </li>
+              <li class="perangkatdesa" id="perangkatdesa">
+                <a href="/perangkatdesa_admin"><i class="fa-solid fa-folder-open"></i>Perangkat Desa</a>
+              </li>
+              <li>
+                <a href="/login_admin"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="admin_landingpage_right">
+        <div class="admin_maincontent">
+          <div class="admin_maincontent_top">
+            <div class="admin_maincontent_top_wrapper">
+              <div class="hamburger-option">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <div class="page-title">
+                <h3><%- title %></h3>
+              </div>
+              <div class="profile_admin">
+                <div class="profile_admin_img">
+                  <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile_admin_name">
+                  <h3>Rizki Hanif</h3>
+                  <span>Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="admin_maincontent_bottom">
+            <div class="dashboard_content">
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title" id="title-profildesa">
+                    <h3>Data Umum Kepala Desa</h3>
+                  </div>
+                  <div class="form_perangkatdesa_Wrapper">
+                    <% kepaladesa.forEach(kepaladesaItem => { %>
+                    <form method="POST" action="/editprofildesa" class="form_perangkatdesa" id="formkades" enctype="multipart/form-data">
+                      <div class="photokades">
+                        <% if (kepaladesaItem.photo) { %>
+                          <img class="img-kades" src="/img/perangkatdesa/<%= kepaladesaItem.photo %>" alt="">
+                        <% } %>
+                      </div>
+                      <div class="form_group box-red" id="namakadesbox">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" name="nama" id="nama" placeholder=" : Nama Kepala Desa" value="<%= kepaladesaItem.nama %>" />
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </div>
+                      <span class="namakades_validasi" id="namakades_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Nama Wajib Diisi </span>
+                      <div class="form_group box-red" id="ttlkadesbox">
+                        <label for="ttl">Tempat, Tanggal Lahir</label>
+                        <input type="text" name="ttl" id="ttl" placeholder=" : Tempat, Tanggal Lahir" value="<%= kepaladesaItem.ttl %>" />
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </div>
+                      <span class="ttlkades_validasi" id="ttlkades_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Tempat Tanggal Lahir Wajib Diisi </span>
+                      <div class="form_group">
+                        <label for="jeniskelamin">Jenis Kelamin</label>
+                        <select name="jeniskelamin" id="jeniskelamin" required>
+                          <option disabled>--Pilih Jenis Kelamin--</option>
+                          <option value="Laki-laki" <%= kepaladesaItem.jeniskelamin === 'Laki-laki' ? 'selected' : '' %>>Laki-laki</option>
+                          <option value="Perempuan" <%= kepaladesaItem.jeniskelamin === 'Perempuan' ? 'selected' : '' %>>Perempuan</option>
+                        </select>
+                      </div>
+                      <div class="form_group">
+                        <label for="agama">Agama </label>
+                        <select name="agama" id="agama" required>
+                          <option disabled selected>--Pilih Agama--</option>
+                          <option value="Islam" <%= kepaladesaItem.agama == 'Islam' ? 'selected' : '' %>>Islam</option>
+                          <option value="Kristen"<%= kepaladesaItem.agama == 'Kristen' ? 'selected' : '' %>>Kristen</option>
+                          <option value="Hindu" <%= kepaladesaItem.agama == 'Hindu' ? 'selected' : '' %>>Hindu</option>
+                          <option value="Buddha" <%= kepaladesaItem.agama == 'Buddha' ? 'selected' : '' %>>Buddha</option>
+                        </select>
+                      </div>
+                      <div class="form_group box-red" id="alamatkadesbox">
+                        <label for="alamat">Alamat Lengkap </label>
+                        <input required type="text" name="alamat" id="alamat" placeholder="Silahkan isi alamat lengkap..." value="<%= kepaladesaItem.alamat %>" />
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </div>
+                      <span class="alamatkades_validasi" id="alamatkades_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Alamat Wajib Diisi </span>
+                      <div class="form_group box-red" id="pendidikankadesbox">
+                        <label for="pendidikan">Pendidikan Terakhir</label>
+                        <input type="text" required name="pendidikan" id="pendidikan" placeholder="Silahkan isi pendidikan terakhir..." value="<%= kepaladesaItem.pendidikan %>" />
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </div>
+                      <span class="pendidikankades_validasi" id="pendidikankades_validasi"> <i class="fa-solid fa-exclamation-circle"></i> Pendidikan Terakhir Wajib Diisi </span>
+                      <div class="form_group box-red" id="photokadesbox">
+                        <label for="photo">Ganti Foto</label>
+                        <input type="file" name="photo" id="photo" />
+                        <i class="fa-solid fa-pen-to-square"></i>
+                      </div> 
+                      <span class="photovalidasi" id="photovalidasi"> <i class="fa-solid fa-exclamation-circle"></i> Foto wajib di upload </span> 
+                      <div class="submit_button">
+                        <button type="submit" id="submit_button_kades"><i class="fa-solid fa-user-plus"></i>Simpan Data Kepala Desa</button>
+                      </div>
+                    </div>
+                    </form>
+                    <% }) %>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Riwayat Pendidikan Kepala Desa</h3>
+                  </div>
+                  <div class="dashboard_modals_addnew">
+                    <a href="/tambahriwayatpendidikan"><i class="fa-solid fa-plus"></i>Tambah Riwayat Pendidikan</a>
+                  </div>
+                  <div class="dashboard_content_table">
+                    <table class="table_content">
+                      <thead class="dark-color">
+                        <tr>
+                          <th>No</th>
+                          <th>Riwayat Pendidikan</th>
+                          <th>
+                            <!-- <i class="fa-solid fa-trash" style="color: var(--secondary-color2)"></i -->
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% let count = 1; %> <% riwayatpendidikankades.forEach(riwayatpendidikankadesItem => { %>
+                        <tr>
+                          <td><%= count++ %></td>
+                          <td><%= riwayatpendidikankadesItem.pendidikan %></td>
+                          <td>
+                            <a href="/deleteriwayatpendidikan?id=<%= riwayatpendidikankadesItem.id %>"><i class="fa-solid fa-trash" style="color: var(--secondary-color2)"></i></a>
+                          </td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="dashboard_content_down">
+                <div class="dashboard_content">
+                  <div class="dashboard_content_title">
+                    <h3>Riwayat Pekerjaan Kepala Desa</h3>
+                  </div>
+                  <div class="dashboard_modals_addnew">
+                    <a href="/tambahriwayatpekerjaan"><i class="fa-solid fa-plus"></i>Tambah Riwayat Pendidikan</a>
+                  </div>
+                  <div class="dashboard_content_table">
+                    <table class="table_content">
+                      <thead class="dark-color">
+                        <tr>
+                          <th>No</th>
+                          <th>Riwayat Pekerjaan</th>
+                          <th>
+                            <!-- <i class="fa-solid fa-trash" style="color: var(--secondary-color2)"></i -->
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% let count1 = 1; %> <% pekerjaankades.forEach(pekerjaankadesItem => { %>
+                        <tr>
+                          <td><%= count1++ %></td>
+                          <td><%= pekerjaankadesItem.pekerjaan%></td>
+                          <td>
+                            <a href="/deleteriwayatpekerjaan?id=<%= pekerjaankadesItem.id %>"><i class="fa-solid fa-trash" style="color: var(--secondary-color2)"></i></a>
+                          </td>
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // nama kades
+      const namakadesbox = document.getElementById('namakadesbox');
+      const inputnamakades = document.getElementById('nama');
+      const namakades_validasi = document.getElementById('namakades_validasi');
+      const submit_button_kades = document.getElementById('submit_button_kades');
+
+      // ttl kades
+      const ttlkadesbox = document.getElementById('ttlkadesbox');
+      const inputttlkades = document.getElementById('ttl');
+      const ttlkades_validasi = document.getElementById('ttlkades_validasi');
+
+      // alamat kades
+      const alamatkadesbox = document.getElementById('alamatkadesbox');
+      const inputalamatkades = document.getElementById('alamat');
+      const alamatkades_validasi = document.getElementById('alamatkades_validasi');
+
+      // pendidikanterakhir kades
+      const pendidikankadesbox = document.getElementById('pendidikankadesbox');
+      const inputpendidikankades = document.getElementById('pendidikan');
+      const pendidikankades_validasi = document.getElementById('pendidikankades_validasi');
+     
+      // photo 
+      const photokadesbox = document.getElementById('photokadesbox');
+      const inputphotokades = document.getElementById('photo');
+      const photokades_validasi = document.getElementById('photovalidasi');
+
+      function namakadesvalidasi(){
+        if(inputnamakades.value === ''){
+          namakadesbox.classList.add('active');
+          namakades_validasi.classList.add('active');
+        }else{
+          namakadesbox.classList.remove('active');
+          namakades_validasi.classList.remove('active');
+        }
+      }
+      function ttlkadesvalidasi(){
+        if(inputttlkades.value === ''){
+          ttlkadesbox.classList.add('active');
+          ttlkades_validasi.classList.add('active');
+        }else{
+          ttlkadesbox.classList.remove('active');
+          ttlkades_validasi.classList.remove('active');
+        }
+      }
+      function alamatkadesvalidasi(){
+        if(inputalamatkades.value === ''){
+          alamatkadesbox.classList.add('active');
+          alamatkades_validasi.classList.add('active');
+        }else{
+          alamatkadesbox.classList.remove('active');
+          alamatkades_validasi.classList.remove('active');
+        }
+      }
+      function pendidikankadesvalidasi(){
+        if(inputpendidikankades.value === ''){
+          pendidikankadesbox.classList.add('active');
+          pendidikankades_validasi.classList.add('active');
+        }else{
+          pendidikankadesbox.classList.remove('active');
+          pendidikankades_validasi.classList.remove('active');
+        }
+      }
+      function photokades(){
+        if(inputphotokades.value === ''){
+          photokadesbox.classList.add('active');
+          photokades_validasi.classList.add('active');
+        }else{
+          photokadesbox.classList.remove('active');
+          photokades_validasi.classList.remove('active');
+        }
+      }
+
+
+      submit_button_kades.addEventListener('click', (e) => {
+        e.preventDefault();
+        namakadesvalidasi();
+        ttlkadesvalidasi();
+        alamatkadesvalidasi();
+        pendidikankadesvalidasi();
+        photokades();
+
+        
+        // submit all
+        if(inputnamakades.value !== '' && inputttlkades.value !== '' && inputalamatkades.value !== '' && inputpendidikankades.value !== '' && inputphotokades.value !== ''){
+          document.getElementById('formkades').submit();
+        }
+      })
+
+      
+    </script>
+    <script defer src="/js/adminscript.js"></script>
+  </body>
+</html>
